@@ -11,6 +11,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Modules Category Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const moduleCards = document.querySelectorAll('.module-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active to current
+            button.classList.add('active');
+
+            const category = button.getAttribute('data-category');
+
+            moduleCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+
     // FAQ Accordion
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     

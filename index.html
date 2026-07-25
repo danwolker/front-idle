@@ -99,10 +99,27 @@
                     <p>Conheça cada detalhe do sistema através das capturas reais da extensão.</p>
                 </div>
 
+                <!-- Category Filter Buttons -->
+                <div class="modulos-filter fade-in-up">
+                    <button class="filter-btn active" data-category="all">Todos os Módulos</button>
+                    <button class="filter-btn" data-category="hud">HUD & Interface</button>
+                    <button class="filter-btn" data-category="tracker">Rastreamento</button>
+                    <button class="filter-btn" data-category="automation">Automação & PVP</button>
+                    <button class="filter-btn" data-category="economy">Economia & Reports</button>
+                </div>
+
                 <div class="modulos-grid">
 
                     <!-- 1: HUD Personalizada -->
-                    <div class="module-card glass-panel fade-in-up">
+                    <div class="module-card fade-in-up" data-category="hud">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">hud_personalizada.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/hudpersonalizada.jpg" alt="HUD Personalizada" class="module-img">
                         </div>
@@ -114,7 +131,15 @@
                     </div>
 
                     <!-- 2: HUD Analyzer -->
-                    <div class="module-card glass-panel fade-in-up delay-1">
+                    <div class="module-card fade-in-up delay-1" data-category="hud">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">hud_analyzer.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/hudanalyzer.jpg" alt="HUD Analyzer" class="module-img">
                         </div>
@@ -126,7 +151,15 @@
                     </div>
 
                     <!-- 3: Analyzer Completo -->
-                    <div class="module-card glass-panel fade-in-up delay-2">
+                    <div class="module-card fade-in-up delay-2" data-category="economy">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">hunt_analyzer_full.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/analyzer.jpg" alt="Analyzer Completo" class="module-img">
                         </div>
@@ -138,7 +171,15 @@
                     </div>
 
                     <!-- 4: Tracker de Bosses -->
-                    <div class="module-card glass-panel fade-in-up">
+                    <div class="module-card fade-in-up" data-category="tracker">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">boss_tracker.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/trackboss.jpg" alt="Tracker de Bosses" class="module-img">
                         </div>
@@ -150,7 +191,15 @@
                     </div>
 
                     <!-- 5: Tracker de Criaturas -->
-                    <div class="module-card glass-panel fade-in-up delay-1">
+                    <div class="module-card fade-in-up delay-1" data-category="tracker">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">monster_bestiary.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/trackmonster.jpg" alt="Tracker de Criaturas" class="module-img">
                         </div>
@@ -162,7 +211,15 @@
                     </div>
 
                     <!-- 6: Alertas PVP -->
-                    <div class="module-card glass-panel fade-in-up delay-2">
+                    <div class="module-card fade-in-up delay-2" data-category="automation">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">pvp_defense_alert.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/pvp.jpg" alt="PVP e Alertas" class="module-img">
                         </div>
@@ -174,7 +231,15 @@
                     </div>
 
                     <!-- 7: Treino Automático -->
-                    <div class="module-card glass-panel fade-in-up">
+                    <div class="module-card fade-in-up" data-category="automation">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">auto_trainer.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/treino.jpg" alt="Treino Automático" class="module-img">
                         </div>
@@ -186,7 +251,15 @@
                     </div>
 
                     <!-- 8: Venda & Auto Loot -->
-                    <div class="module-card glass-panel fade-in-up delay-1">
+                    <div class="module-card fade-in-up delay-1" data-category="economy">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">auto_seller_loot.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/venda.jpg" alt="Venda Automática" class="module-img">
                         </div>
@@ -198,7 +271,15 @@
                     </div>
 
                     <!-- 9: Waves & Arenas -->
-                    <div class="module-card glass-panel fade-in-up delay-2">
+                    <div class="module-card fade-in-up delay-2" data-category="automation">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">waves_arena_mode.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/waves.jpg" alt="Modo Waves" class="module-img">
                         </div>
@@ -210,7 +291,15 @@
                     </div>
 
                     <!-- 10: Logs de Atividades -->
-                    <div class="module-card glass-panel fade-in-up">
+                    <div class="module-card fade-in-up" data-category="economy">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">realtime_activity_logs.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/logs.jpg" alt="Logs de Atividades" class="module-img">
                         </div>
@@ -222,7 +311,15 @@
                     </div>
 
                     <!-- 11: Configurações -->
-                    <div class="module-card glass-panel fade-in-up delay-1">
+                    <div class="module-card fade-in-up delay-1" data-category="hud">
+                        <div class="window-mockup-bar">
+                            <div class="window-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="window-title-text">advanced_settings.mod</span>
+                        </div>
                         <div class="module-img-container">
                             <img src="assets/config.jpg" alt="Painel de Configurações" class="module-img">
                         </div>
