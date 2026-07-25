@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Idle Extension</title>
+    <link rel="icon" type="image/png" href="assets/store_icon_128x128.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .privacy-container {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 40px;
+            background: rgba(22, 27, 38, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            color: #e2e8f0;
+            line-height: 1.8;
+        }
+        .privacy-container h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .privacy-container h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            color: #60a5fa;
+        }
+        .privacy-container p, .privacy-container ul {
+            margin-bottom: 16px;
+            color: #cbd5e1;
+        }
+        .privacy-container ul {
+            padding-left: 24px;
+        }
+        .privacy-container li {
+            margin-bottom: 8px;
+        }
+        .last-updated {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fundo decorativo -->
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <img src="assets/store_icon_128x128.png" alt="Idle Extension Logo" class="logo-img">
+                <span class="logo-text">Idle <span class="highlight">Extension</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#features">Recursos</a>
+                <a href="index.html#modulos">Módulos</a>
+                <a href="index.html#pricing">Preço</a>
+                <a href="privacy.html" class="active">Privacidade</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="privacy-container">
+            <a href="index.html" class="back-link">← Voltar ao início</a>
+            <h1>Política de Privacidade</h1>
+            <p class="last-updated">Última atualização: 25 de Julho de 2026</p>
+
+            <p>Esta Política de Privacidade descreve como o <strong>Idle Extension</strong> lida com as informações e dados dos usuários ao utilizar nossa extensão para navegador Google Chrome.</p>
+
+            <h2>1. Coleta de Dados</h2>
+            <p>O <strong>Idle Extension não coleta, armazena, transmite ou compartilha nenhum dado pessoal</strong> dos seus usuários. Não solicitamos cadastro, e-mail, nome, localização ou dados de pagamento dentro da extensão.</p>
+
+            <h2>2. Uso de Armazenamento Local (Local Storage)</h2>
+            <p>A extensão utiliza exclusivamente o armazenamento interno do próprio navegador (via APIs <code>chrome.storage.local</code> e <code>chrome.storage.session</code>) para guardar:</p>
+            <ul>
+                <li>Preferências de interface do usuário (ex: atalhos, exibição de cards de bosses);</li>
+                <li>Métricas locais de caça (XP/h, loot acumulado) para exibição nos painéis;</li>
+                <li>Estado temporário da aba do jogo.</li>
+            </ul>
+            <p>Todos esses dados permanecem 100% salvos no seu próprio dispositivo e nunca são enviados para servidores externos.</p>
+
+            <h2>3. Permissões Solicitadas no Navegador</h2>
+            <p>Solicitamos apenas as permissões estritamente necessárias para o funcionamento do recurso:</p>
+            <ul>
+                <li><strong>Host Permissions (baiakidle.com):</strong> Para permitir que a extensão exiba a interface HUD e leia estatísticas do jogo durante a partida.</li>
+                <li><strong>Storage:</strong> Para salvar suas configurações de preferências localmente.</li>
+                <li><strong>Alarms:</strong> Para manter o acompanhamento contínuo da sessão do jogo em segundo plano.</li>
+                <li><strong>Host Permissions (tibiadata.com / tibiawiki.com.br):</strong> Para consultar informações públicas de loot e criaturas para exibição no hover.</li>
+            </ul>
+
+            <h2>4. Compartilhamento e Venda de Dados</h2>
+            <p>Declaramos formalmente que:</p>
+            <ul>
+                <li>Não vendemos nem transferimos dados de usuários a terceiros.</li>
+                <li>Não utilizamos dados para finalidades de rastreamento publicitário ou análise de crédito.</li>
+                <li>Não utilizamos código remoto executável. Todo o código é empacotado e auditado localmente.</li>
+            </ul>
+
+            <h2>5. Contato</h2>
+            <p>Se você tiver qualquer dúvida sobre esta Política de Privacidade ou sobre o funcionamento do Idle Extension, entre em contato conosco através do nosso canal oficial de suporte.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">
+                <img src="assets/store_icon_128x128.png" alt="Idle Extension Logo" class="logo-img-sm">
+                <span class="logo-text">Idle <span class="highlight">Extension</span></span>
+            </div>
+            <p>&copy; 2026 Idle Extension. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="index.html#features">Recursos</a>
+                <a href="index.html#modulos">Módulos</a>
+                <a href="privacy.html">Política de Privacidade</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
