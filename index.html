@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnonymousIdle - Automação Avançada</title>
+    <title>Idle Extension - Automação Avançada & Inteligente</title>
+    <link rel="icon" type="image/png" href="assets/store_icon_128x128.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Fundo decorativo -->
     <div class="bg-shape bg-shape-1"></div>
     <div class="bg-shape bg-shape-2"></div>
+    <div class="bg-shape bg-shape-3"></div>
 
     <header class="navbar">
         <div class="container nav-content">
-            <div class="logo">
-                <span class="logo-text">Anonymous<span class="highlight">Idle</span></span>
-            </div>
+            <a href="#home" class="logo">
+                <img src="assets/store_icon_128x128.png" alt="Idle Extension Logo" class="logo-img">
+                <span class="logo-text">Idle <span class="highlight">Extension</span></span>
+            </a>
             <nav class="nav-links">
                 <a href="#features">Recursos</a>
+                <a href="#gallery">Módulos</a>
                 <a href="#pricing">Preço</a>
                 <a href="#faq">FAQ</a>
                 <a href="#pricing" class="btn btn-sm btn-primary">Comprar Agora</a>
@@ -33,49 +37,210 @@
         <section class="hero" id="home">
             <div class="container hero-content">
                 <div class="hero-text fade-in-up">
-                    <div class="badge">Lançamento Oficial</div>
+                    <div class="badge">
+                        <img src="assets/store_icon_128x128.png" alt="Icon" class="badge-icon"> Extensão Oficial v2.0
+                    </div>
                     <h1>A Automação Definitiva para seu Progresso.</h1>
-                    <p>Suba de nível automaticamente com a inteligência do AnonymousIdle. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at erat non justo.</p>
+                    <p>O <strong>Idle Extension</strong> oferece controle total do seu jogo com HUD customizável, acompanhamento de estatísticas em tempo real, rastreamento de bosses, automação de treinos e muito mais.</p>
                     <div class="hero-actions">
-                        <a href="#pricing" class="btn btn-lg btn-primary pulse-btn">Adquirir por R$ 25,00</a>
-                        <a href="#features" class="btn btn-lg btn-secondary">Saiba Mais</a>
+                        <a href="#pricing" class="btn btn-lg btn-primary pulse-btn">Acesso Vitalício - R$ 25,00</a>
+                        <a href="#gallery" class="btn btn-lg btn-secondary">Ver Telas da Extensão</a>
                     </div>
                     <div class="trust-indicators">
-                        <span>🔒 Pagamento 100% Seguro</span>
-                        <span>⚡ Entrega Imediata</span>
+                        <span>🔒 Compra 100% Segura</span>
+                        <span>⚡ Download Imediato</span>
+                        <span>🛡️ Sistema Anti-ban</span>
                     </div>
                 </div>
                 <div class="hero-image-wrapper fade-in-up delay-1">
-                    <div class="glass-panel mockup-panel">
-                        <img src="assets/hero.png" alt="Dashboard do AnonymousIdle" class="hero-img">
+                    <div class="glass-panel mockup-panel clickable-img-container" data-img="assets/hero.png" data-title="Painel Principal do Idle Extension">
+                        <img src="assets/hero.png" alt="Dashboard do Idle Extension" class="hero-img">
+                        <div class="zoom-hint">🔍 Clique para expandir</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Features Section -->
+        <!-- Main Highlights -->
         <section class="features" id="features">
             <div class="container">
                 <div class="section-title fade-in-up">
-                    <h2>Recursos Premium</h2>
-                    <p>Tudo o que você precisa para maximizar seu farm sem esforço.</p>
+                    <h2>Por que escolher o Idle Extension?</h2>
+                    <p>Projetado para ser leve, indetectável e extremamente personalizável.</p>
                 </div>
                 <div class="feature-grid">
                     <div class="feature-card glass-panel fade-in-up">
-                        <div class="feature-icon">🚀</div>
+                        <div class="feature-icon">⚡</div>
                         <h3>Desempenho Otimizado</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+                        <p>Desenvolvido para consumo mínimo de recursos com execução ultra-rápida diretamente no seu navegador.</p>
                     </div>
                     <div class="feature-card glass-panel fade-in-up delay-1">
                         <div class="feature-icon">🛡️</div>
-                        <h3>Anti-Detecção Avançado</h3>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+                        <h3>Segurança & Anti-Detecção</h3>
+                        <p>Ações simuladas com intervalos humanos dinâmicos para proteção total da sua conta.</p>
                     </div>
                     <div class="feature-card glass-panel fade-in-up delay-2">
-                        <div class="feature-icon">⚙️</div>
-                        <h3>Configuração Flexível</h3>
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <div class="feature-icon">🎯</div>
+                        <h3>HUD Personalizável</h3>
+                        <p>Insira métricas diretamente na sua tela, ajustando transparência, posição e dados visíveis.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery / Modules Showcase Section -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <div class="section-title fade-in-up">
+                    <h2>Módulos & Funcionalidades</h2>
+                    <p>Conheça cada detalhe do sistema através das capturas reais da extensão.</p>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <!-- Card 1: HUD Personalizada -->
+                    <div class="gallery-card glass-panel fade-in-up" data-img="assets/hudpersonalizada.jpg" data-title="HUD Personalizada na Tela">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/hudpersonalizada.jpg" alt="HUD Personalizada">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Interface</span>
+                            <h3>HUD Personalizada</h3>
+                            <p>Interface flutuante diretamente no jogo. Personalize a exibição e acompanhe dados sem poluir a tela.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: HUD Analyzer -->
+                    <div class="gallery-card glass-panel fade-in-up delay-1" data-img="assets/hudanalyzer.jpg" data-title="HUD Analyzer em Tempo Real">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/hudanalyzer.jpg" alt="HUD Analyzer">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Métricas</span>
+                            <h3>HUD Analyzer</h3>
+                            <p>Estatísticas ao vivo de EXP/hora, Loot/hora, Danos e Waste exibidos diretamente no overlay.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Analyzer Completo -->
+                    <div class="gallery-card glass-panel fade-in-up delay-2" data-img="assets/analyzer.jpg" data-title="Painel Completo de Analyzer">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/analyzer.jpg" alt="Analyzer Completo">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Relatórios</span>
+                            <h3>Analyzer Avançado</h3>
+                            <p>Relatório completo das caçadas, consumo de recursos e balanço de lucro detalhado por sessão.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Tracker de Bosses -->
+                    <div class="gallery-card glass-panel fade-in-up" data-img="assets/trackboss.jpg" data-title="Rastreamento de Bosses">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/trackboss.jpg" alt="Tracker de Bosses">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Rastreamento</span>
+                            <h3>Tracker de Bosses</h3>
+                            <p>Monitore horários de nascimentos, tempo de respawn e receba alertas automáticos de bosses.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Tracker de Criaturas -->
+                    <div class="gallery-card glass-panel fade-in-up delay-1" data-img="assets/trackmonster.jpg" data-title="Tracker de Criaturas">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/trackmonster.jpg" alt="Tracker de Criaturas">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Bestiário</span>
+                            <h3>Tracker de Monstros</h3>
+                            <p>Acompanhe contagem de kills para tarefas e evolução no bestiário de forma automatizada.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Alertas PVP -->
+                    <div class="gallery-card glass-panel fade-in-up delay-2" data-img="assets/pvp.jpg" data-title="Sistema de Segurança PVP">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/pvp.jpg" alt="PVP e Alertas">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Segurança</span>
+                            <h3>Alertas & PVP</h3>
+                            <p>Detecção de jogadores inimigos, alertas sonoros/visuais e ações defensivas imediatas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Treino Automático -->
+                    <div class="gallery-card glass-panel fade-in-up" data-img="assets/treino.jpg" data-title="Treino Automático de Habilidades">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/treino.jpg" alt="Treino Automático">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Automação</span>
+                            <h3>Treino Automático</h3>
+                            <p>Evolua suas habilidades de treino 24 horas por dia com controle automático de comida e armas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8: Venda & Auto Loot -->
+                    <div class="gallery-card glass-panel fade-in-up delay-1" data-img="assets/venda.jpg" data-title="Sistema de Venda Automática">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/venda.jpg" alt="Venda Automática">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Economia</span>
+                            <h3>Venda & Loot Auto</h3>
+                            <p>Organize seus itens e venda saques automaticamente no NPC sem perder tempo de jogo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 9: Waves & Arenas -->
+                    <div class="gallery-card glass-panel fade-in-up delay-2" data-img="assets/waves.jpg" data-title="Modo Waves e Desafios">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/waves.jpg" alt="Modo Waves">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Combate</span>
+                            <h3>Modo Waves & Arenas</h3>
+                            <p>Estratégia e automação para superar ondas de monstros e arenas com máxima sobrevivência.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 10: Logs de Atividades -->
+                    <div class="gallery-card glass-panel fade-in-up" data-img="assets/logs.jpg" data-title="Logs e Registros em Tempo Real">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/logs.jpg" alt="Logs de Atividades">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Monitoramento</span>
+                            <h3>Logs em Tempo Real</h3>
+                            <p>Histórico completo de ações executadas, itens coletados e notificações do sistema.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 11: Configurações -->
+                    <div class="gallery-card glass-panel fade-in-up delay-1" data-img="assets/config.jpg" data-title="Painel de Configurações">
+                        <div class="gallery-img-wrapper">
+                            <img src="assets/config.jpg" alt="Painel de Configurações">
+                            <span class="gallery-overlay"><span class="zoom-icon">🔍</span> Ampliar</span>
+                        </div>
+                        <div class="gallery-info">
+                            <span class="module-tag">Ajustes</span>
+                            <h3>Configurações Avançadas</h3>
+                            <p>Personalize atalhos, tempos de resposta, magias de cura e rotações de ataques com facilidade.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -84,27 +249,29 @@
         <section class="pricing" id="pricing">
             <div class="container">
                 <div class="pricing-card glass-panel fade-in-up">
+                    <div class="badge-pricing">Oferta de Lançamento</div>
                     <div class="pricing-header">
-                        <h2>Acesso Vitalício</h2>
+                        <h2>Acesso Vitalício ao Idle Extension</h2>
                         <div class="price">
                             <span class="currency">R$</span>
                             <span class="amount">25</span>
                             <span class="cents">,00</span>
                         </div>
-                        <p>Pagamento único. Sem mensalidades.</p>
+                        <p>Pagamento único • Sem assinaturas mensais</p>
                     </div>
                     <div class="pricing-body">
                         <ul class="feature-list">
-                            <li><span class="check">✓</span> Acesso completo ao AnonymousIdle</li>
-                            <li><span class="check">✓</span> Atualizações gratuitas</li>
-                            <li><span class="check">✓</span> Suporte dedicado</li>
-                            <li><span class="check">✓</span> Sistema Anti-ban atualizado</li>
+                            <li><span class="check">✓</span> Acesso irrestrito a todos os módulos</li>
+                            <li><span class="check">✓</span> Rastreamento de Bosses & Monstros</li>
+                            <li><span class="check">✓</span> HUD Personalizável & Analyzer ao vivo</li>
+                            <li><span class="check">✓</span> Automação de Treino & Venda Auto</li>
+                            <li><span class="check">✓</span> Sistema Anti-ban & Atualizações inclusas</li>
+                            <li><span class="check">✓</span> Suporte direto via comunidade</li>
                         </ul>
                     </div>
                     <div class="pricing-footer">
-                        <!-- Este botão depois apontará para o gateway ou webhook -->
-                        <a href="#" class="btn btn-lg btn-primary full-width glow-effect">Comprar Agora e Baixar</a>
-                        <small class="secure-text">🛡️ Transação criptografada</small>
+                        <a href="#" class="btn btn-lg btn-primary full-width glow-effect">Adquirir Agora - R$ 25,00</a>
+                        <small class="secure-text">🛡️ Transação criptografada • Envio imediato do arquivo</small>
                     </div>
                 </div>
             </div>
@@ -115,33 +282,43 @@
             <div class="container">
                 <div class="section-title fade-in-up">
                     <h2>Dúvidas Frequentes</h2>
+                    <p>Tire suas dúvidas antes de adquirir o Idle Extension.</p>
                 </div>
                 <div class="accordion glass-panel fade-in-up">
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            Como recebo a extensão após a compra?
+                            Como recebo a extensão após o pagamento?
                             <span class="icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>Após a confirmação do pagamento, você receberá um link de download seguro automaticamente no seu e-mail.</p>
+                            <p>Assim que o pagamento for aprovado, você receberá acesso imediato para download dos arquivos da extensão prontos para instalação no Chrome, Edge ou Brave.</p>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            É seguro utilizar na minha conta principal?
+                            Como é realizada a instalação?
                             <span class="icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>A instalação é rápida e simples: basta ativar o 'Modo do Desenvolvedor' nas extensões do seu navegador e carregar a pasta do Idle Extension. Um guia passo a passo acompanha o download.</p>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <button class="accordion-header">
-                            Funciona em qualquer navegador?
+                            Vou ter acesso a atualizações futuras?
                             <span class="icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Sim! Com a licença vitalícia por R$ 25,00 você tem direito a todas as atualizações e correções disponibilizadas para o Idle Extension sem custos adicionais.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            É seguro para o meu computador e navegador?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Totalmente. O Idle Extension roda de forma nativa e isolada no seu navegador, sem necessidade de baixar executáveis (.exe) suspeitos ou modificar arquivos do sistema.</p>
                         </div>
                     </div>
                 </div>
@@ -149,16 +326,26 @@
         </section>
     </main>
 
+    <!-- Modal Lightbox para Ampliar Imagens -->
+    <div class="lightbox-modal" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <div class="lightbox-content">
+            <img src="" alt="Ampliado" id="lightboxImg">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
     <footer>
         <div class="container footer-content">
             <div class="logo">
-                <span class="logo-text">Anonymous<span class="highlight">Idle</span></span>
+                <img src="assets/store_icon_128x128.png" alt="Idle Extension Logo" class="logo-img-sm">
+                <span class="logo-text">Idle <span class="highlight">Extension</span></span>
             </div>
-            <p>&copy; 2026 AnonymousIdle. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Idle Extension. Todos os direitos reservados.</p>
             <div class="footer-links">
-                <a href="#">Termos de Uso</a>
-                <a href="#">Privacidade</a>
-                <a href="#">Contato</a>
+                <a href="#features">Recursos</a>
+                <a href="#gallery">Módulos</a>
+                <a href="#pricing">Preço</a>
             </div>
         </div>
     </footer>

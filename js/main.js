@@ -11,6 +11,58 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Lightbox Modal for Screenshots
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(imgSrc, captionText) {
+        lightboxImg.src = imgSrc;
+        lightboxCaption.textContent = captionText || '';
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            lightboxImg.src = '';
+            lightboxCaption.textContent = '';
+        }, 300);
+    }
+
+    // Attach click listener to gallery cards
+    document.querySelectorAll('.gallery-card, .clickable-img-container').forEach(card => {
+        card.addEventListener('click', () => {
+            const imgSrc = card.getAttribute('data-img');
+            const titleText = card.getAttribute('data-title');
+            if (imgSrc) {
+                openLightbox(imgSrc, titleText);
+            }
+        });
+    });
+
+    // Close Lightbox events
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+
+    if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
     // FAQ Accordion
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     
