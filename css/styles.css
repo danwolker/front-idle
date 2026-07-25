@@ -109,20 +109,33 @@ h1, h2, h3, .logo-text, .price {
 }
 
 .logo {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+    vertical-align: middle !important;
+    line-height: 1 !important;
+}
+
+.logo:hover, .logo:focus, .logo:active {
+    text-decoration: none !important;
 }
 
 .logo-img {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
-    flex-shrink: 0;
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+    object-fit: contain !important;
+    display: block !important;
+    flex-shrink: 0 !important;
     border-radius: 8px;
     box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
     transition: transform 0.3s ease;
+    margin: 0 !important;
 }
 
 .logo:hover .logo-img {
@@ -130,17 +143,22 @@ h1, h2, h3, .logo-text, .price {
 }
 
 .logo-img-sm {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
+    width: 30px !important;
+    height: 30px !important;
+    object-fit: contain !important;
     border-radius: 6px;
 }
 
 .logo-text {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--text-main);
-    white-space: nowrap;
+    font-size: 1.4rem !important;
+    font-weight: 800 !important;
+    color: var(--text-main) !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-decoration: none !important;
 }
 
 .highlight {
