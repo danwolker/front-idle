@@ -874,7 +874,7 @@ footer {
     top: 50%;
     transform: translateY(-50%);
     width: 42px;
-    height: 72vh;
+    height: 88vh;
     z-index: 999;
     pointer-events: none;
     background: transparent !important;
