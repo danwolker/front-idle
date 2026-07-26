@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -7,9 +8,12 @@
     <link rel="icon" type="image/png" href="assets/store_icon_128x128.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <!-- Fundo decorativo -->
     <div class="bg-shape bg-shape-1"></div>
@@ -22,12 +26,20 @@
                 <img src="assets/store_icon_128x128.png" alt="Idle Extension Logo" class="logo-img">
                 <span class="logo-text">Idle <span class="highlight">Extension</span></span>
             </a>
-            <nav class="nav-links">
+            <!-- Mobile Hamburger Button -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir Menu de Navegação">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
                 <a href="#features">Recursos</a>
                 <a href="#modulos">Módulos</a>
                 <a href="#pricing">Preço</a>
                 <a href="#faq">FAQ</a>
-                <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Baixar na Web Store</a>
+                <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-sm btn-primary nav-webstore-btn">Baixar na Web Store</a>
             </nav>
         </div>
     </header>
@@ -42,16 +54,23 @@
                         <span>Extensão Oficial v2.0</span>
                     </div>
                     <h1>A Automação Definitiva para seu Progresso.</h1>
-                    <p>O <strong>Idle Extension</strong> oferece controle total do seu jogo com HUD customizável, acompanhamento de estatísticas em tempo real, rastreamento de bosses, automação de treinos e muito mais.</p>
+                    <p>O <strong>Idle Extension</strong> oferece controle total do seu jogo com HUD customizável,
+                        acompanhamento de estatísticas em tempo real, logs de atividades, automação de treinos e muito
+                        mais.</p>
                     <div class="hero-actions">
-                        <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-primary pulse-btn">
+                        <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-lg btn-primary pulse-btn">
                             <svg class="btn-chrome-icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
-                                <circle cx="12" cy="12" r="10" fill="#4285F4"/>
-                                <path d="M12 2C14.76 2 17.26 3.12 19.07 4.93L15.6 10.94C14.78 9.77 13.48 9 12 9V2Z" fill="#EA4335"/>
-                                <path d="M4.93 4.93C6.74 3.12 9.24 2 12 2V9C10.52 9 9.22 9.77 8.4 10.94L4.93 4.93Z" fill="#FBBC05"/>
-                                <path d="M4.93 4.93L8.4 10.94C7.53 12.18 7.53 13.82 8.4 15.06L4.93 21.07C2.63 18.77 1.5 15.48 2 12C2.5 8.52 4.93 4.93 4.93 4.93Z" fill="#34A853"/>
-                                <circle cx="12" cy="12" r="4" fill="#FFFFFF"/>
-                                <circle cx="12" cy="12" r="2.8" fill="#1A73E8"/>
+                                <circle cx="12" cy="12" r="10" fill="#4285F4" />
+                                <path d="M12 2C14.76 2 17.26 3.12 19.07 4.93L15.6 10.94C14.78 9.77 13.48 9 12 9V2Z"
+                                    fill="#EA4335" />
+                                <path d="M4.93 4.93C6.74 3.12 9.24 2 12 2V9C10.52 9 9.22 9.77 8.4 10.94L4.93 4.93Z"
+                                    fill="#FBBC05" />
+                                <path
+                                    d="M4.93 4.93L8.4 10.94C7.53 12.18 7.53 13.82 8.4 15.06L4.93 21.07C2.63 18.77 1.5 15.48 2 12C2.5 8.52 4.93 4.93 4.93 4.93Z"
+                                    fill="#34A853" />
+                                <circle cx="12" cy="12" r="4" fill="#FFFFFF" />
+                                <circle cx="12" cy="12" r="2.8" fill="#1A73E8" />
                             </svg>
                             Baixe nossa Extensão na Web Store
                         </a>
@@ -60,13 +79,13 @@
                     <div class="trust-indicators">
                         <span>🔒 Compra 100% Segura</span>
                         <span>⚡ Download Imediato</span>
-                        <span>🛡️ Sistema Anti-ban</span>
                     </div>
                 </div>
                 <div class="hero-logo-wrapper fade-in-up delay-1">
                     <div class="hero-logo-card glass-panel">
                         <div class="logo-glow-ring"></div>
-                        <img src="assets/store_icon_128x128.png" alt="Idle Extension Logo Animada" class="hero-animated-logo">
+                        <img src="assets/store_icon_128x128.png" alt="Idle Extension Logo Animada"
+                            class="hero-animated-logo">
                         <div class="logo-card-title">Idle Extension</div>
                         <div class="logo-card-subtitle">Automação Inteligente</div>
                     </div>
@@ -74,11 +93,57 @@
             </div>
         </section>
 
-        <!-- Divisor Humano de Seção -->
+        <!-- Divisor Humano de Seção com Robô Caminhando e Pulando -->
         <div class="section-divider container fade-in-up">
             <div class="divider-line"></div>
             <div class="divider-badge"><span class="divider-dot"></span></div>
             <div class="divider-line"></div>
+            
+            <div class="divider-walking-robot">
+                <svg class="divider-robot-svg" viewBox="0 0 40 44">
+                    <defs>
+                        <linearGradient id="divBotHeadGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="100%" stop-color="#cbd5e1"/>
+                        </linearGradient>
+                        <linearGradient id="divBotEarGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="#0284c7"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Perna Traseira -->
+                    <g class="divider-robot-leg divider-robot-leg-back">
+                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Braço Traseiro -->
+                    <g class="divider-robot-arm divider-robot-arm-back">
+                        <path d="M 22 19 L 27 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 22 19 L 27 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Corpo / Tronco / Viseira Virado para a Esquerda -->
+                    <g class="divider-robot-body">
+                        <line x1="20" y1="7" x2="20" y2="2" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="20" cy="2" r="2" fill="#06b6d4"/>
+                        <circle cx="20" cy="13" r="8" fill="url(#divBotHeadGrad)" stroke="#0f172a" stroke-width="1.8"/>
+                        <path d="M 12 12 Q 13 9 17 9 Q 18 13 17 15 Q 13 16 12 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+                        <circle cx="14" cy="12" r="0.8" fill="#ffffff"/>
+                        <rect x="25" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad)" stroke="#0f172a" stroke-width="1"/>
+                        <path d="M 15 20 L 25 20 L 23 29 L 17 29 Z" fill="url(#divBotHeadGrad)" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="18" cy="24" r="1.5" fill="#3b82f6"/>
+                    </g>
+                    <!-- Perna Dianteira -->
+                    <g class="divider-robot-leg divider-robot-leg-front">
+                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Braço Dianteiro -->
+                    <g class="divider-robot-arm divider-robot-arm-front">
+                        <path d="M 18 19 L 12 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 18 19 L 12 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                </svg>
+            </div>
         </div>
 
         <!-- Main Highlights -->
@@ -92,27 +157,75 @@
                     <div class="feature-card glass-panel fade-in-up">
                         <div class="feature-icon">⚡</div>
                         <h3>Desempenho Otimizado</h3>
-                        <p>Desenvolvido para consumo mínimo de recursos com execução ultra-rápida diretamente no seu navegador.</p>
+                        <p>Desenvolvido para consumo mínimo de recursos com execução ultra-rápida diretamente no seu
+                            navegador.</p>
                     </div>
-                    <div class="feature-card glass-panel fade-in-up delay-1">
+                    <!-- <div class="feature-card glass-panel fade-in-up delay-1">
                         <div class="feature-icon">🛡️</div>
                         <h3>Segurança & Anti-Detecção</h3>
                         <p>Ações simuladas com intervalos humanos dinâmicos para proteção total da sua conta.</p>
-                    </div>
+                    </div> -->
                     <div class="feature-card glass-panel fade-in-up delay-2">
                         <div class="feature-icon">🎯</div>
                         <h3>HUD Personalizável</h3>
-                        <p>Insira métricas diretamente na sua tela, ajustando transparência, posição e dados visíveis.</p>
+                        <p>Insira métricas diretamente na sua tela, ajustando transparência, posição e dados visíveis.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Divisor Humano de Seção -->
+        <!-- Divisor Humano de Seção com Robô Caminhando e Pulando -->
         <div class="section-divider container fade-in-up">
             <div class="divider-line"></div>
             <div class="divider-badge"><span class="divider-dot"></span></div>
             <div class="divider-line"></div>
+            
+            <div class="divider-walking-robot">
+                <svg class="divider-robot-svg" viewBox="0 0 40 44">
+                    <defs>
+                        <linearGradient id="divBotHeadGrad2" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="100%" stop-color="#cbd5e1"/>
+                        </linearGradient>
+                        <linearGradient id="divBotEarGrad2" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="#0284c7"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Perna Traseira -->
+                    <g class="divider-robot-leg divider-robot-leg-back">
+                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Braço Traseiro -->
+                    <g class="divider-robot-arm divider-robot-arm-back">
+                        <path d="M 22 19 L 27 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 22 19 L 27 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Corpo / Tronco / Viseira Virado para a Esquerda -->
+                    <g class="divider-robot-body">
+                        <line x1="20" y1="7" x2="20" y2="2" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="20" cy="2" r="2" fill="#06b6d4"/>
+                        <circle cx="20" cy="13" r="8" fill="url(#divBotHeadGrad2)" stroke="#0f172a" stroke-width="1.8"/>
+                        <path d="M 12 12 Q 13 9 17 9 Q 18 13 17 15 Q 13 16 12 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+                        <circle cx="14" cy="12" r="0.8" fill="#ffffff"/>
+                        <rect x="25" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad2)" stroke="#0f172a" stroke-width="1"/>
+                        <path d="M 15 20 L 25 20 L 23 29 L 17 29 Z" fill="url(#divBotHeadGrad2)" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="18" cy="24" r="1.5" fill="#3b82f6"/>
+                    </g>
+                    <!-- Perna Dianteira -->
+                    <g class="divider-robot-leg divider-robot-leg-front">
+                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Braço Dianteiro -->
+                    <g class="divider-robot-arm divider-robot-arm-front">
+                        <path d="M 18 19 L 12 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 18 19 L 12 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                </svg>
+            </div>
         </div>
 
         <!-- Modules Section -->
@@ -150,7 +263,8 @@
                         <div class="module-content">
                             <span class="module-tag">Interface</span>
                             <h3>HUD Personalizada</h3>
-                            <p>Interface flutuante diretamente no jogo. Personalize a exibição e acompanhe dados sem poluir a tela.</p>
+                            <p>Interface flutuante diretamente no jogo. Personalize a exibição e acompanhe dados sem
+                                poluir a tela.</p>
                         </div>
                     </div>
 
@@ -170,7 +284,8 @@
                         <div class="module-content">
                             <span class="module-tag">Métricas</span>
                             <h3>HUD Analyzer</h3>
-                            <p>Estatísticas ao vivo de EXP/hora, Loot/hora, Danos e Waste exibidos diretamente no overlay.</p>
+                            <p>Estatísticas ao vivo de EXP/hora, Loot/hora, Danos e Waste exibidos diretamente no
+                                overlay.</p>
                         </div>
                     </div>
 
@@ -190,7 +305,8 @@
                         <div class="module-content">
                             <span class="module-tag">Relatórios</span>
                             <h3>Analyzer Avançado</h3>
-                            <p>Relatório completo das caçadas, consumo de recursos e balanço de lucro detalhado por sessão.</p>
+                            <p>Relatório completo das caçadas, consumo de recursos e balanço de lucro detalhado por
+                                sessão.</p>
                         </div>
                     </div>
 
@@ -250,7 +366,8 @@
                         <div class="module-content">
                             <span class="module-tag">Combate</span>
                             <h3>PVP</h3>
-                            <p>Entre e saia da fila do pvp de forma automatizada com configuração para quantidade de perdas.</p>
+                            <p>Entre e saia da fila do pvp de forma automatizada com configuração para quantidade de
+                                perdas.</p>
                         </div>
                     </div>
 
@@ -270,7 +387,8 @@
                         <div class="module-content">
                             <span class="module-tag">Automação</span>
                             <h3>Treino Automático</h3>
-                            <p>Configure sua estamina para direcionar seu personagem a sala de treinamento para recuperar estamina.</p>
+                            <p>Configure sua estamina para direcionar seu personagem a sala de treinamento para
+                                recuperar estamina.</p>
                         </div>
                     </div>
 
@@ -310,7 +428,8 @@
                         <div class="module-content">
                             <span class="module-tag">Combate</span>
                             <h3>Modo Waves & Arenas</h3>
-                            <p>Estratégia e automação para superar ondas de monstros e arenas com máxima sobrevivência.</p>
+                            <p>Estratégia e automação para superar ondas de monstros e arenas com máxima sobrevivência.
+                            </p>
                         </div>
                     </div>
 
@@ -358,11 +477,57 @@
             </div>
         </section>
 
-        <!-- Divisor Humano de Seção -->
+        <!-- Divisor Humano de Seção com Robô Caminhando e Pulando -->
         <div class="section-divider container fade-in-up">
             <div class="divider-line"></div>
             <div class="divider-badge"><span class="divider-dot"></span></div>
             <div class="divider-line"></div>
+            
+            <div class="divider-walking-robot">
+                <svg class="divider-robot-svg" viewBox="0 0 40 44">
+                    <defs>
+                        <linearGradient id="divBotHeadGrad3" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="100%" stop-color="#cbd5e1"/>
+                        </linearGradient>
+                        <linearGradient id="divBotEarGrad3" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="#0284c7"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Perna Traseira -->
+                    <g class="divider-robot-leg divider-robot-leg-back">
+                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Braço Traseiro -->
+                    <g class="divider-robot-arm divider-robot-arm-back">
+                        <path d="M 22 19 L 27 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 22 19 L 27 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Corpo / Tronco / Viseira Virado para a Esquerda -->
+                    <g class="divider-robot-body">
+                        <line x1="20" y1="7" x2="20" y2="2" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="20" cy="2" r="2" fill="#06b6d4"/>
+                        <circle cx="20" cy="13" r="8" fill="url(#divBotHeadGrad3)" stroke="#0f172a" stroke-width="1.8"/>
+                        <path d="M 12 12 Q 13 9 17 9 Q 18 13 17 15 Q 13 16 12 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+                        <circle cx="14" cy="12" r="0.8" fill="#ffffff"/>
+                        <rect x="25" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad3)" stroke="#0f172a" stroke-width="1"/>
+                        <path d="M 15 20 L 25 20 L 23 29 L 17 29 Z" fill="url(#divBotHeadGrad3)" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="18" cy="24" r="1.5" fill="#3b82f6"/>
+                    </g>
+                    <!-- Perna Dianteira -->
+                    <g class="divider-robot-leg divider-robot-leg-front">
+                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Braço Dianteiro -->
+                    <g class="divider-robot-arm divider-robot-arm-front">
+                        <path d="M 18 19 L 12 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 18 19 L 12 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                    </g>
+                </svg>
+            </div>
         </div>
 
         <!-- Pricing Section -->
@@ -379,31 +544,41 @@
                         </div>
                         <p class="price-subtitle">⚡ <strong>Taxa única de lançamento • Sem mensalidades</strong></p>
                         <div class="scarcity-alert">
-                            🚨 <strong>ATENÇÃO - INÍCIO DE PROJETO:</strong> O valor de <strong>R$ 40,00 para acesso vitalício</strong> é uma oportunidade única deste início de projeto. 
-                            Nas próximas versões a extensão passará a ser cobrada exclusivamente por <strong>MENSALIDADE</strong>. Adquira agora e garanta isenção total de mensalidades para sempre!
+                            🚨 <strong>ATENÇÃO - INÍCIO DE PROJETO:</strong> O valor de <strong>R$ 40,00 para acesso
+                                vitalício</strong> é uma oportunidade única deste início de projeto.
+                            Nas próximas versões a extensão passará a ser cobrada exclusivamente por
+                            <strong>MENSALIDADE</strong>. Adquira agora e garanta isenção total de mensalidades para
+                            sempre!
                         </div>
                     </div>
                     <div class="pricing-body">
                         <ul class="feature-list">
-                            <li><span class="check">✓</span> <strong>Valor promocional de R$ 40,00 no início de projeto</strong></li>
+                            <li><span class="check">✓</span> <strong>Valor promocional de R$ 40,00 no início de
+                                    projeto</strong></li>
                             <li><span class="check">✓</span> Acesso vitalício irrestrito a todos os módulos</li>
-                            <li><span class="check">✓</span> Rastreamento de Bosses & Monstros</li>
+                            <li><span class="check">✓</span> Bosses & Monstros</li>
                             <li><span class="check">✓</span> HUD Personalizável & Analyzer ao vivo</li>
                             <li><span class="check">✓</span> Automação de Treino & PVP Inteligente</li>
-                            <li><span class="check">✓</span> <strong>Isenção permanente de futuras mensalidades</strong></li>
+                            <li><span class="check">✓</span> <strong>Isenção permanente de futuras mensalidades</strong>
+                            </li>
                             <li><span class="check">✓</span> Sistema Anti-ban & Suporte dedicado</li>
                         </ul>
                     </div>
                     <div class="pricing-footer">
                         <div class="pricing-actions">
-                            <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-primary full-width glow-effect pulse-btn">
+                            <a href="https://chromewebstore.google.com/" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-lg btn-primary full-width glow-effect pulse-btn">
                                 <svg class="btn-chrome-icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
-                                    <circle cx="12" cy="12" r="10" fill="#4285F4"/>
-                                    <path d="M12 2C14.76 2 17.26 3.12 19.07 4.93L15.6 10.94C14.78 9.77 13.48 9 12 9V2Z" fill="#EA4335"/>
-                                    <path d="M4.93 4.93C6.74 3.12 9.24 2 12 2V9C10.52 9 9.22 9.77 8.4 10.94L4.93 4.93Z" fill="#FBBC05"/>
-                                    <path d="M4.93 4.93L8.4 10.94C7.53 12.18 7.53 13.82 8.4 15.06L4.93 21.07C2.63 18.77 1.5 15.48 2 12C2.5 8.52 4.93 4.93 4.93 4.93Z" fill="#34A853"/>
-                                    <circle cx="12" cy="12" r="4" fill="#FFFFFF"/>
-                                    <circle cx="12" cy="12" r="2.8" fill="#1A73E8"/>
+                                    <circle cx="12" cy="12" r="10" fill="#4285F4" />
+                                    <path d="M12 2C14.76 2 17.26 3.12 19.07 4.93L15.6 10.94C14.78 9.77 13.48 9 12 9V2Z"
+                                        fill="#EA4335" />
+                                    <path d="M4.93 4.93C6.74 3.12 9.24 2 12 2V9C10.52 9 9.22 9.77 8.4 10.94L4.93 4.93Z"
+                                        fill="#FBBC05" />
+                                    <path
+                                        d="M4.93 4.93L8.4 10.94C7.53 12.18 7.53 13.82 8.4 15.06L4.93 21.07C2.63 18.77 1.5 15.48 2 12C2.5 8.52 4.93 4.93 4.93 4.93Z"
+                                        fill="#34A853" />
+                                    <circle cx="12" cy="12" r="4" fill="#FFFFFF" />
+                                    <circle cx="12" cy="12" r="2.8" fill="#1A73E8" />
                                 </svg>
                                 Baixe nossa Extensão na Web Store
                             </a>
@@ -428,7 +603,9 @@
                             <span class="icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>O Idle Extension é publicado diretamente na loja oficial do <strong>Google Chrome Web Store</strong>, garantindo máxima segurança, verificação nativa e facilidade de instalação em apenas 1 clique no seu navegador (Chrome, Edge ou Brave).</p>
+                            <p>O Idle Extension é publicado diretamente na loja oficial do <strong>Google Chrome Web
+                                    Store</strong>, garantindo máxima segurança, verificação nativa e facilidade de
+                                instalação em apenas 1 clique no seu navegador (Chrome, Edge ou Brave).</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -437,7 +614,10 @@
                             <span class="icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>A compra do seu acesso é realizada diretamente dentro da própria extensão de forma prática. Ao concluir o pagamento, o sistema gera automaticamente uma <strong>chave de acesso única e individual</strong> vinculada ao seu perfil, liberando todas as ferramentas instantaneamente.</p>
+                            <p>A compra do seu acesso é realizada diretamente dentro da própria extensão de forma
+                                prática. Ao concluir o pagamento, o sistema gera automaticamente uma <strong>chave de
+                                    acesso única e individual</strong> vinculada ao seu perfil, liberando todas as
+                                ferramentas instantaneamente.</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -446,7 +626,9 @@
                             <span class="icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>Todos os pagamentos são processados com total segurança e criptografia de ponta através da plataforma de pagamentos do <strong>Asaas</strong>, oferecendo suporte a PIX com aprovação instantânea e cartão de crédito.</p>
+                            <p>Todos os pagamentos são processados com total segurança e criptografia de ponta através
+                                da plataforma de pagamentos do <strong>Asaas</strong>, oferecendo suporte a PIX com
+                                aprovação instantânea e cartão de crédito.</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -455,7 +637,10 @@
                             <span class="icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>Você não precisa baixar nenhum arquivo novo manualmente no futuro! Todas as atualizações, melhorias de desempenho, correções e novos módulos serão enviados e sincronizados <strong>automaticamente pela própria plataforma da extensão</strong>.</p>
+                            <p>Você não precisa baixar nenhum arquivo novo manualmente no futuro! Todas as atualizações,
+                                melhorias de desempenho, correções e novos módulos serão enviados e sincronizados
+                                <strong>automaticamente pela própria plataforma da extensão</strong>.
+                            </p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -464,7 +649,10 @@
                             <span class="icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>O valor promocional de <strong>R$ 40,00 em pagamento único vitalício</strong> é exclusivo para este início de projeto. Nas próximas versões, o modelo de cobrança será alterado definitivamente para <strong>mensalidades</strong>. Comprando agora, você fica isento de qualquer mensalidade futura para sempre.</p>
+                            <p>O valor promocional de <strong>R$ 40,00 em pagamento único vitalício</strong> é exclusivo
+                                para este início de projeto. Nas próximas versões, o modelo de cobrança será alterado
+                                definitivamente para <strong>mensalidades</strong>. Comprando agora, você fica isento de
+                                qualquer mensalidade futura para sempre.</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -473,7 +661,9 @@
                             <span class="icon">+</span>
                         </button>
                         <div class="accordion-content">
-                            <p>Totalmente seguro. O Idle Extension roda de forma nativa e isolada dentro do seu navegador Web, sem necessidade de baixar executáveis (.exe) suspeitos ou modificar arquivos do sistema.</p>
+                            <p>Totalmente seguro. O Idle Extension roda de forma nativa e isolada dentro do seu
+                                navegador Web, sem necessidade de baixar executáveis (.exe) suspeitos ou modificar
+                                arquivos do sistema.</p>
                         </div>
                     </div>
                 </div>
@@ -503,123 +693,158 @@
             <defs>
                 <!-- Gradiente Metálico das Hastes (Aço / Titânio) -->
                 <linearGradient id="ladderMetalGrad" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#1e293b"/>
-                    <stop offset="30%" stop-color="#64748b"/>
-                    <stop offset="55%" stop-color="#cbd5e1"/>
-                    <stop offset="80%" stop-color="#475569"/>
-                    <stop offset="100%" stop-color="#0f172a"/>
+                    <stop offset="0%" stop-color="#1e293b" />
+                    <stop offset="30%" stop-color="#64748b" />
+                    <stop offset="55%" stop-color="#cbd5e1" />
+                    <stop offset="80%" stop-color="#475569" />
+                    <stop offset="100%" stop-color="#0f172a" />
                 </linearGradient>
                 <!-- Gradiente Metálico dos Degraus (Aço Escovado) -->
                 <linearGradient id="rungMetalGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#f1f5f9"/>
-                    <stop offset="40%" stop-color="#94a3b8"/>
-                    <stop offset="75%" stop-color="#475569"/>
-                    <stop offset="100%" stop-color="#1e293b"/>
+                    <stop offset="0%" stop-color="#f1f5f9" />
+                    <stop offset="40%" stop-color="#94a3b8" />
+                    <stop offset="75%" stop-color="#475569" />
+                    <stop offset="100%" stop-color="#1e293b" />
                 </linearGradient>
             </defs>
             <!-- Hastes da Escada Metálica -->
-            <rect x="3" y="0" width="6" height="800" rx="3" fill="url(#ladderMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-            <rect x="31" y="0" width="6" height="800" rx="3" fill="url(#ladderMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
+            <rect x="3" y="0" width="6" height="800" rx="3" fill="url(#ladderMetalGrad)" stroke="#0f172a"
+                stroke-width="0.8" />
+            <rect x="31" y="0" width="6" height="800" rx="3" fill="url(#ladderMetalGrad)" stroke="#0f172a"
+                stroke-width="0.8" />
             <!-- Degraus Metálicos Visíveis (33 degraus) -->
             <g class="ladder-rungs">
-                <rect x="4" y="14" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="14.5" x2="34" y2="14.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="14" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="14.5" x2="34" y2="14.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="38" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="38.5" x2="34" y2="38.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="38" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="38.5" x2="34" y2="38.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="62" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="62.5" x2="34" y2="62.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="62" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="62.5" x2="34" y2="62.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="86" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="86.5" x2="34" y2="86.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="86" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="86.5" x2="34" y2="86.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="110" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="110.5" x2="34" y2="110.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="110" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="110.5" x2="34" y2="110.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="134" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="134.5" x2="34" y2="134.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="134" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="134.5" x2="34" y2="134.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="158" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="158.5" x2="34" y2="158.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="158" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="158.5" x2="34" y2="158.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="182" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="182.5" x2="34" y2="182.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="182" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="182.5" x2="34" y2="182.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="206" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="206.5" x2="34" y2="206.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="206" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="206.5" x2="34" y2="206.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="230" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="230.5" x2="34" y2="230.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="230" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="230.5" x2="34" y2="230.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="254" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="254.5" x2="34" y2="254.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="254" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="254.5" x2="34" y2="254.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="278" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="278.5" x2="34" y2="278.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="278" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="278.5" x2="34" y2="278.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="302" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="302.5" x2="34" y2="302.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="302" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="302.5" x2="34" y2="302.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="326" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="326.5" x2="34" y2="326.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="326" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="326.5" x2="34" y2="326.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="350" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="350.5" x2="34" y2="350.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="350" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="350.5" x2="34" y2="350.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="374" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="374.5" x2="34" y2="374.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="374" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="374.5" x2="34" y2="374.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="398" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="398.5" x2="34" y2="398.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="398" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="398.5" x2="34" y2="398.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="422" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="422.5" x2="34" y2="422.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="422" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="422.5" x2="34" y2="422.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="446" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="446.5" x2="34" y2="446.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="446" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="446.5" x2="34" y2="446.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="470" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="470.5" x2="34" y2="470.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="470" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="470.5" x2="34" y2="470.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="494" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="494.5" x2="34" y2="494.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="494" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="494.5" x2="34" y2="494.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="518" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="518.5" x2="34" y2="518.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="518" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="518.5" x2="34" y2="518.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="542" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="542.5" x2="34" y2="542.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="542" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="542.5" x2="34" y2="542.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="566" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="566.5" x2="34" y2="566.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="566" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="566.5" x2="34" y2="566.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="590" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="590.5" x2="34" y2="590.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="590" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="590.5" x2="34" y2="590.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="614" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="614.5" x2="34" y2="614.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="614" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="614.5" x2="34" y2="614.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="638" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="638.5" x2="34" y2="638.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="638" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="638.5" x2="34" y2="638.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="662" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="662.5" x2="34" y2="662.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="662" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="662.5" x2="34" y2="662.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="686" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="686.5" x2="34" y2="686.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="686" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="686.5" x2="34" y2="686.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="710" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="710.5" x2="34" y2="710.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="710" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="710.5" x2="34" y2="710.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="734" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="734.5" x2="34" y2="734.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="734" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="734.5" x2="34" y2="734.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="758" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="758.5" x2="34" y2="758.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="758" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="758.5" x2="34" y2="758.5" stroke="#ffffff" stroke-width="1.2" />
 
-                <rect x="4" y="782" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a" stroke-width="0.8"/>
-                <line x1="6" y1="782.5" x2="34" y2="782.5" stroke="#ffffff" stroke-width="1.2"/>
+                <rect x="4" y="782" width="32" height="5" rx="2" fill="url(#rungMetalGrad)" stroke="#0f172a"
+                    stroke-width="0.8" />
+                <line x1="6" y1="782.5" x2="34" y2="782.5" stroke="#ffffff" stroke-width="1.2" />
             </g>
         </svg>
 
@@ -627,57 +852,71 @@
             <svg class="scroll-robot-svg" viewBox="0 0 48 52">
                 <defs>
                     <linearGradient id="botHeadGrad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stop-color="#ffffff"/>
-                        <stop offset="100%" stop-color="#cbd5e1"/>
+                        <stop offset="0%" stop-color="#ffffff" />
+                        <stop offset="100%" stop-color="#cbd5e1" />
                     </linearGradient>
                     <linearGradient id="botEarGrad" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#3b82f6"/>
-                        <stop offset="100%" stop-color="#0284c7"/>
+                        <stop offset="0%" stop-color="#3b82f6" />
+                        <stop offset="100%" stop-color="#0284c7" />
                     </linearGradient>
                 </defs>
 
                 <!-- Braço Esquerdo -->
                 <g class="scroll-robot-arm scroll-robot-arm-left">
-                    <path d="M 15 22 Q 8 19 5 13 C 4 10 7 8 9 11 L 14 18" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M 15 22 Q 8 19 5 13 C 4 10 7 8 9 11 L 14 18" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M 15 22 Q 8 19 5 13 C 4 10 7 8 9 11 L 14 18" fill="none" stroke="#0f172a" stroke-width="4"
+                        stroke-linecap="round" />
+                    <path d="M 15 22 Q 8 19 5 13 C 4 10 7 8 9 11 L 14 18" fill="none" stroke="#3b82f6"
+                        stroke-width="2.5" stroke-linecap="round" />
                 </g>
 
                 <!-- Braço Direito -->
                 <g class="scroll-robot-arm scroll-robot-arm-right">
-                    <path d="M 33 22 Q 40 19 43 13 C 44 10 41 8 39 11 L 34 18" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M 33 22 Q 40 19 43 13 C 44 10 41 8 39 11 L 34 18" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+                    <path d="M 33 22 Q 40 19 43 13 C 44 10 41 8 39 11 L 34 18" fill="none" stroke="#0f172a"
+                        stroke-width="4" stroke-linecap="round" />
+                    <path d="M 33 22 Q 40 19 43 13 C 44 10 41 8 39 11 L 34 18" fill="none" stroke="#3b82f6"
+                        stroke-width="2.5" stroke-linecap="round" />
                 </g>
 
                 <!-- Perna Esquerda -->
                 <g class="scroll-robot-leg scroll-robot-leg-left">
-                    <path d="M 18 36 L 14 44 L 8 44" fill="none" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M 18 36 L 14 44 L 8 44" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 18 36 L 14 44 L 8 44" fill="none" stroke="#0f172a" stroke-width="4.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M 18 36 L 14 44 L 8 44" fill="none" stroke="#3b82f6" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
                 </g>
 
                 <!-- Perna Direita -->
                 <g class="scroll-robot-leg scroll-robot-leg-right">
-                    <path d="M 30 36 L 34 44 L 40 44" fill="none" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M 30 36 L 34 44 L 40 44" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 30 36 L 34 44 L 40 44" fill="none" stroke="#0f172a" stroke-width="4.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M 30 36 L 34 44 L 40 44" fill="none" stroke="#3b82f6" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round" />
                 </g>
 
                 <!-- Corpo / Tronco / Capacete (Visto de Costas) -->
                 <g class="scroll-robot-body">
                     <!-- Antena -->
-                    <line x1="24" y1="9" x2="24" y2="4" stroke="#0f172a" stroke-width="2.5"/>
-                    <circle cx="24" cy="3" r="2.5" fill="#06b6d4" stroke="#0f172a" stroke-width="1.5"/>
+                    <line x1="24" y1="9" x2="24" y2="4" stroke="#0f172a" stroke-width="2.5" />
+                    <circle cx="24" cy="3" r="2.5" fill="#06b6d4" stroke="#0f172a" stroke-width="1.5" />
 
                     <!-- Orelhas Azuis -->
-                    <rect x="8" y="11" width="5" height="9" rx="2.5" fill="url(#botEarGrad)" stroke="#0f172a" stroke-width="1.5"/>
-                    <rect x="35" y="11" width="5" height="9" rx="2.5" fill="url(#botEarGrad)" stroke="#0f172a" stroke-width="1.5"/>
+                    <rect x="8" y="11" width="5" height="9" rx="2.5" fill="url(#botEarGrad)" stroke="#0f172a"
+                        stroke-width="1.5" />
+                    <rect x="35" y="11" width="5" height="9" rx="2.5" fill="url(#botEarGrad)" stroke="#0f172a"
+                        stroke-width="1.5" />
 
                     <!-- Cabeça (Costas do Capacete) -->
-                    <path d="M 12 16 C 12 8 36 8 36 16 C 36 24 12 24 12 16 Z" fill="url(#botHeadGrad)" stroke="#0f172a" stroke-width="2"/>
-                    <path d="M 24 10 L 24 22" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 2"/>
+                    <path d="M 12 16 C 12 8 36 8 36 16 C 36 24 12 24 12 16 Z" fill="url(#botHeadGrad)" stroke="#0f172a"
+                        stroke-width="2" />
+                    <path d="M 24 10 L 24 22" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 2" />
 
                     <!-- Mochila / Tronco de Costas -->
-                    <path d="M 16 23 L 32 23 C 34 23 35 25 34 28 L 32 37 C 31 39 17 39 16 37 L 14 28 C 13 25 14 23 16 23 Z" fill="url(#botHeadGrad)" stroke="#0f172a" stroke-width="2"/>
-                    <rect x="19" y="26" width="10" height="9" rx="2" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
-                    <circle cx="24" cy="30" r="1.8" fill="#06b6d4"/>
+                    <path
+                        d="M 16 23 L 32 23 C 34 23 35 25 34 28 L 32 37 C 31 39 17 39 16 37 L 14 28 C 13 25 14 23 16 23 Z"
+                        fill="url(#botHeadGrad)" stroke="#0f172a" stroke-width="2" />
+                    <rect x="19" y="26" width="10" height="9" rx="2" fill="#1e293b" stroke="#3b82f6"
+                        stroke-width="1.2" />
+                    <circle cx="24" cy="30" r="1.8" fill="#06b6d4" />
                 </g>
             </svg>
         </div>
@@ -685,4 +924,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

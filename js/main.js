@@ -11,6 +11,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mobile Menu Toggle & Auto-Close Drawer
+    const menuToggle = document.getElementById('mobileMenuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('mobile-active');
+            document.body.style.overflow = navLinks.classList.contains('mobile-active') ? 'hidden' : '';
+        });
+
+        // Fechar ao clicar em qualquer link de navegação
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('mobile-active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Fechar ao clicar fora da gaveta
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('mobile-active') && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('mobile-active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
     // Modules Category Filtering
     const filterButtons = document.querySelectorAll('.filter-btn');
     const moduleCards = document.querySelectorAll('.module-card');
