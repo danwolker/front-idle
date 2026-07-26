@@ -86,5 +86,61 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.fade-in-up').forEach(element => {
         observer.observe(element);
     });
+
+    // Hero Carousel (Alternância entre o Banner e o Dashboard)
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+    const prevBtn = document.querySelector('.prev-arrow');
+    const nextBtn = document.querySelector('.next-arrow');
+    
+    if (slides.length > 0) {
+        let currentSlide = 0;
+        let slideInterval;
+
+        function goToSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+
+        function startAutoSlide() {
+            stopAutoSlide();
+            slideInterval = setInterval(nextSlide, 4500); // 4.5s
+        }
+
+        function stopAutoSlide() {
+            if (slideInterval) clearInterval(slideInterval);
+        }
+
+        if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoSlide(); });
+        if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoSlide(); });
+
+        dots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                goToSlide(idx);
+                startAutoSlide();
+            });
+        });
+
+        const carouselCard = document.querySelector('.hero-carousel-card');
+        if (carouselCard) {
+            carouselCard.addEventListener('mouseenter', stopAutoSlide);
+            carouselCard.addEventListener('mouseleave', startAutoSlide);
+        }
+
+        startAutoSlide();
+    }
     
 });
+

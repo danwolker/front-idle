@@ -33,16 +33,7 @@
     </header>
 
     <main>
-        <!-- Componente 1: Banner da Promoção (Acima de Tudo) -->
-        <section class="promo-top-section" id="oferta">
-            <div class="container">
-                <div class="promo-banner-card glass-panel fade-in-up">
-                    <img src="assets/Sem título.png" alt="Oferta de Lançamento - Licença Vitalícia R$ 40,00 e Teste Grátis 24 Horas" class="promo-banner-img">
-                </div>
-            </div>
-        </section>
-
-        <!-- Componente 2: Card da Automação Definitiva para seu Progresso -->
+        <!-- Hero Section com Carrossel de Imagens -->
         <section class="hero" id="home">
             <div class="container hero-content">
                 <div class="hero-text fade-in-up">
@@ -62,12 +53,24 @@
                         <span>🛡️ Sistema Anti-ban</span>
                     </div>
                 </div>
-                <div class="hero-logo-wrapper fade-in-up delay-1">
-                    <div class="hero-logo-card glass-panel">
-                        <div class="logo-glow-ring"></div>
-                        <img src="assets/store_icon_128x128.png" alt="Idle Extension Logo Animada" class="hero-animated-logo">
-                        <div class="logo-card-title">Idle Extension</div>
-                        <div class="logo-card-subtitle">Automação Inteligente</div>
+
+                <!-- Carrossel de Destaque no Lado Direito -->
+                <div class="hero-carousel-wrapper fade-in-up delay-1">
+                    <div class="hero-carousel-card glass-panel">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active">
+                                <img src="assets/Sem título.png" alt="Oferta de Lançamento R$ 40 Vitalício" class="hero-slide-img">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/hero.png" alt="Painel do Bot Idle Extension" class="hero-slide-img">
+                            </div>
+                        </div>
+                        <button class="carousel-arrow prev-arrow" aria-label="Slide Anterior">&#10094;</button>
+                        <button class="carousel-arrow next-arrow" aria-label="Próximo Slide">&#10095;</button>
+                        <div class="carousel-dots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                        </div>
                     </div>
                 </div>
             </div>
