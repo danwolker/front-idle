@@ -87,60 +87,71 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(element);
     });
 
-    // Hero Carousel (Alternância entre o Banner e o Dashboard)
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dots .dot');
-    const prevBtn = document.querySelector('.prev-arrow');
-    const nextBtn = document.querySelector('.next-arrow');
-    
-    if (slides.length > 0) {
-        let currentSlide = 0;
-        let slideInterval;
+    // Scroll Ladder Robot Animation
+    const ladderWidget = document.querySelector('.scroll-ladder-widget');
+    const robotEl = document.getElementById('scrollClimbingRobot');
 
-        function goToSlide(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
+    if (ladderWidget && robotEl) {
+        let currentY = 0;
+        let targetY = 0;
+        let scrollStopTimer = null;
+        let isTicking = false;
 
-            currentSlide = (index + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+        function updateRobotPosition() {
+            const scrollHeight = document.documentElement.scrollHeight;
+            const clientHeight = window.innerHeight;
+            const maxScroll = Math.max(1, scrollHeight - clientHeight);
+            
+            const scrollProgress = Math.min(1, Math.max(0, window.scrollY / maxScroll));
+
+            const ladderHeight = ladderWidget.clientHeight;
+            const robotHeight = robotEl.clientHeight;
+
+            // Travel range inside the ladder container (from top to bottom margin)
+            const minPadding = 8;
+            const maxPadding = 12;
+            const travelDistance = Math.max(0, ladderHeight - robotHeight - minPadding - maxPadding);
+
+            targetY = minPadding + (scrollProgress * travelDistance);
+            
+            // Smooth lerp for fluid motion
+            currentY += (targetY - currentY) * 0.16;
+
+            // Apply smooth CSS transform Y
+            robotEl.style.transform = `translate(-50%, ${currentY.toFixed(2)}px)`;
+
+            // Continue animation frame if not yet reached target
+            if (Math.abs(targetY - currentY) > 0.1) {
+                requestAnimationFrame(updateRobotPosition);
+            } else {
+                isTicking = false;
+            }
         }
 
-        function nextSlide() {
-            goToSlide(currentSlide + 1);
+        function onScroll() {
+            // Activate limb movement class while scrolling
+            robotEl.classList.add('is-climbing');
+
+            if (scrollStopTimer) clearTimeout(scrollStopTimer);
+
+            scrollStopTimer = setTimeout(() => {
+                robotEl.classList.remove('is-climbing');
+            }, 160);
+
+            if (!isTicking) {
+                isTicking = true;
+                requestAnimationFrame(updateRobotPosition);
+            }
         }
 
-        function prevSlide() {
-            goToSlide(currentSlide - 1);
-        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', () => {
+            updateRobotPosition();
+        }, { passive: true });
 
-        function startAutoSlide() {
-            stopAutoSlide();
-            slideInterval = setInterval(nextSlide, 4500); // 4.5s
-        }
-
-        function stopAutoSlide() {
-            if (slideInterval) clearInterval(slideInterval);
-        }
-
-        if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoSlide(); });
-        if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoSlide(); });
-
-        dots.forEach((dot, idx) => {
-            dot.addEventListener('click', () => {
-                goToSlide(idx);
-                startAutoSlide();
-            });
-        });
-
-        const carouselCard = document.querySelector('.hero-carousel-card');
-        if (carouselCard) {
-            carouselCard.addEventListener('mouseenter', stopAutoSlide);
-            carouselCard.addEventListener('mouseleave', startAutoSlide);
-        }
-
-        startAutoSlide();
+        // Initial calculation
+        updateRobotPosition();
     }
-    
 });
+
 

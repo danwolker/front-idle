@@ -867,196 +867,105 @@ footer {
     }
 }
 
-/* Hero Interactive Carousel Styling */
-.hero {
-    min-height: 90vh !important;
-    padding-top: 130px !important;
-    padding-bottom: 4rem !important;
-    display: flex;
-    align-items: center;
-}
-
-.hero-carousel-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.hero-carousel-card {
-    position: relative;
-    width: 100%;
-    max-width: 580px;
-    border-radius: 22px;
-    overflow: hidden;
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(139, 92, 246, 0.4);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(139, 92, 246, 0.25);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero-carousel-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 45px rgba(139, 92, 246, 0.35);
-}
-
-.carousel-track {
-    position: relative;
-    width: 100%;
-    min-height: 320px;
-}
-
-.carousel-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-slide.active {
-    position: relative;
-    opacity: 1;
-    visibility: visible;
-}
-
-.hero-slide-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-    object-fit: cover;
-}
-
-/* Carousel Control Arrows */
-.carousel-arrow {
-    position: absolute;
+/* Scroll Ladder & Climbing Robot Widget */
+.scroll-ladder-widget {
+    position: fixed;
+    right: 2px;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(10, 10, 15, 0.7);
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    backdrop-filter: blur(8px);
-    transition: all 0.25s ease;
+    width: 42px;
+    height: 72vh;
+    z-index: 999;
+    pointer-events: none;
+    background: transparent !important;
+    user-select: none;
 }
 
-.carousel-arrow:hover {
-    background: var(--primary-color);
-    border-color: #a78bfa;
-    transform: translateY(-50%) scale(1.12);
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
-}
-
-.prev-arrow { left: 14px; }
-.next-arrow { right: 14px; }
-
-/* Carousel Dots */
-.carousel-dots {
-    position: absolute;
-    bottom: 14px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-    z-index: 10;
-    background: rgba(10, 10, 15, 0.5);
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-}
-
-.carousel-dots .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.35);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.carousel-dots .dot.active {
-    background: var(--primary-color);
-    width: 26px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
-}
-
-
-
-.hero-promo-notice {
-    display: none !important;
-}
-
-
-
-.promo-section {
-    padding: 3rem 0;
-}
-
-.promo-banner-wrapper {
-    padding: 1rem;
-    border-radius: 20px;
-    background: rgba(15, 23, 42, 0.6);
-    border: 1px solid rgba(245, 158, 11, 0.3);
-    box-shadow: 0 0 40px rgba(245, 158, 11, 0.15);
-    text-align: center;
-    overflow: hidden;
-}
-
-.promo-img {
+.scroll-ladder-svg {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
+    height: 100%;
     display: block;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.45));
 }
 
-.scarcity-alert {
-    background: rgba(99, 102, 241, 0.15);
-    border: 1px dashed rgba(129, 140, 248, 0.5);
-    border-radius: 12px;
-    padding: 1rem;
-    margin-top: 1.2rem;
-    font-size: 0.92rem;
-    color: #cbd5e1;
-    line-height: 1.5;
+.scroll-climbing-robot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 44px;
+    height: 48px;
+    will-change: transform;
+    pointer-events: none;
+    transition: transform 0.06s ease-out;
 }
 
-.scarcity-alert strong {
-    color: #f43f5e;
-}
-
-.btn-success {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    color: #ffffff;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.35);
-}
-
-.btn-success:hover {
-    background: linear-gradient(135deg, #059669 0%, #047857 100%);
-    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
-    transform: translateY(-2px);
-}
-
-.pricing-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+.scroll-robot-svg {
     width: 100%;
+    height: 100%;
+    overflow: visible;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
 }
+
+/* Limb Climbing Animations (Active only during scroll) */
+.scroll-climbing-robot.is-climbing .scroll-robot-arm-left,
+.scroll-climbing-robot.is-climbing .scroll-robot-leg-right {
+    animation: climb-limb-a 260ms ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+.scroll-climbing-robot.is-climbing .scroll-robot-arm-right,
+.scroll-climbing-robot.is-climbing .scroll-robot-leg-left {
+    animation: climb-limb-b 260ms ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+.scroll-climbing-robot.is-climbing .scroll-robot-body {
+    animation: climb-body-sway 260ms ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes climb-limb-a {
+    0% { transform: translateY(-3px) rotate(-5deg); }
+    100% { transform: translateY(3px) rotate(5deg); }
+}
+
+@keyframes climb-limb-b {
+    0% { transform: translateY(3px) rotate(5deg); }
+    100% { transform: translateY(-3px) rotate(-5deg); }
+}
+
+@keyframes climb-body-sway {
+    0% { transform: translateX(-1px) rotate(-1.5deg); }
+    100% { transform: translateX(1px) rotate(1.5deg); }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .scroll-climbing-robot.is-climbing .scroll-robot-arm-left,
+    .scroll-climbing-robot.is-climbing .scroll-robot-leg-right,
+    .scroll-climbing-robot.is-climbing .scroll-robot-arm-right,
+    .scroll-climbing-robot.is-climbing .scroll-robot-leg-left,
+    .scroll-climbing-robot.is-climbing .scroll-robot-body {
+        animation: none !important;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .scroll-ladder-widget {
+        width: 32px;
+        height: 58vh;
+        right: 0px;
+        opacity: 0.85;
+    }
+
+    .scroll-climbing-robot {
+        width: 34px;
+        height: 38px;
+    }
+}
+
+
+
 

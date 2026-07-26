@@ -33,44 +33,32 @@
     </header>
 
     <main>
-        <!-- Hero Section com Carrossel de Imagens -->
+        <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="container hero-content">
                 <div class="hero-text fade-in-up">
                     <div class="badge">
                         <img src="assets/store_icon_128x128.png" alt="Icon" class="badge-icon">
-                        <span>Extensão Oficial v2.0 • Teste 24h Grátis</span>
+                        <span>Extensão Oficial v2.0</span>
                     </div>
                     <h1>A Automação Definitiva para seu Progresso.</h1>
                     <p>O <strong>Idle Extension</strong> oferece controle total do seu jogo com HUD customizável, acompanhamento de estatísticas em tempo real, rastreamento de bosses, automação de treinos e muito mais.</p>
                     <div class="hero-actions">
                         <a href="#pricing" class="btn btn-lg btn-primary pulse-btn">Acesso Vitalício - R$ 40,00</a>
-                        <a href="#pricing" class="btn btn-lg btn-success">⚡ Testar 24h Grátis</a>
+                        <a href="#modulos" class="btn btn-lg btn-secondary">Ver Módulos</a>
                     </div>
                     <div class="trust-indicators">
                         <span>🔒 Compra 100% Segura</span>
-                        <span>⚡ 24h de Teste Sem Custo</span>
+                        <span>⚡ Download Imediato</span>
                         <span>🛡️ Sistema Anti-ban</span>
                     </div>
                 </div>
-
-                <!-- Carrossel de Destaque no Lado Direito -->
-                <div class="hero-carousel-wrapper fade-in-up delay-1">
-                    <div class="hero-carousel-card glass-panel">
-                        <div class="carousel-track">
-                            <div class="carousel-slide active">
-                                <img src="assets/Sem título.png" alt="Oferta de Lançamento R$ 40 Vitalício" class="hero-slide-img">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="assets/hero.png" alt="Painel do Bot Idle Extension" class="hero-slide-img">
-                            </div>
-                        </div>
-                        <button class="carousel-arrow prev-arrow" aria-label="Slide Anterior">&#10094;</button>
-                        <button class="carousel-arrow next-arrow" aria-label="Próximo Slide">&#10095;</button>
-                        <div class="carousel-dots">
-                            <span class="dot active" data-slide="0"></span>
-                            <span class="dot" data-slide="1"></span>
-                        </div>
+                <div class="hero-logo-wrapper fade-in-up delay-1">
+                    <div class="hero-logo-card glass-panel">
+                        <div class="logo-glow-ring"></div>
+                        <img src="assets/store_icon_128x128.png" alt="Idle Extension Logo Animada" class="hero-animated-logo">
+                        <div class="logo-card-title">Idle Extension</div>
+                        <div class="logo-card-subtitle">Automação Inteligente</div>
                     </div>
                 </div>
             </div>
@@ -468,6 +456,108 @@
             </div>
         </div>
     </footer>
+
+    <!-- Widget: Robô na Escada Vertical (Scroll Animated) -->
+    <div class="scroll-ladder-widget" aria-hidden="true">
+        <svg class="scroll-ladder-svg" preserveAspectRatio="none" viewBox="0 0 40 500">
+            <defs>
+                <linearGradient id="ladderWoodGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#3a271d"/>
+                    <stop offset="35%" stop-color="#6e4d36"/>
+                    <stop offset="70%" stop-color="#563b28"/>
+                    <stop offset="100%" stop-color="#291b13"/>
+                </linearGradient>
+                <linearGradient id="rungWoodGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#8c6445"/>
+                    <stop offset="50%" stop-color="#5e412a"/>
+                    <stop offset="100%" stop-color="#382517"/>
+                </linearGradient>
+            </defs>
+            <!-- Hastes da Escada -->
+            <rect x="4" y="0" width="5" height="500" rx="2.5" fill="url(#ladderWoodGrad)"/>
+            <rect x="31" y="0" width="5" height="500" rx="2.5" fill="url(#ladderWoodGrad)"/>
+            <!-- Degraus da Escada -->
+            <g stroke="url(#rungWoodGrad)" stroke-width="3.5" stroke-linecap="round">
+                <line x1="6" y1="15" x2="34" y2="15"/>
+                <line x1="6" y1="42" x2="34" y2="42"/>
+                <line x1="6" y1="69" x2="34" y2="69"/>
+                <line x1="6" y1="96" x2="34" y2="96"/>
+                <line x1="6" y1="123" x2="34" y2="123"/>
+                <line x1="6" y1="150" x2="34" y2="150"/>
+                <line x1="6" y1="177" x2="34" y2="177"/>
+                <line x1="6" y1="204" x2="34" y2="204"/>
+                <line x1="6" y1="231" x2="34" y2="231"/>
+                <line x1="6" y1="258" x2="34" y2="258"/>
+                <line x1="6" y1="285" x2="34" y2="285"/>
+                <line x1="6" y1="312" x2="34" y2="312"/>
+                <line x1="6" y1="339" x2="34" y2="339"/>
+                <line x1="6" y1="366" x2="34" y2="366"/>
+                <line x1="6" y1="393" x2="34" y2="393"/>
+                <line x1="6" y1="420" x2="34" y2="420"/>
+                <line x1="6" y1="447" x2="34" y2="447"/>
+                <line x1="6" y1="474" x2="34" y2="474"/>
+            </g>
+        </svg>
+
+        <div class="scroll-climbing-robot" id="scrollClimbingRobot">
+            <svg class="scroll-robot-svg" viewBox="0 0 48 52">
+                <defs>
+                    <linearGradient id="botHeadGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#ffffff"/>
+                        <stop offset="100%" stop-color="#cbd5e1"/>
+                    </linearGradient>
+                    <linearGradient id="botEarGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#3b82f6"/>
+                        <stop offset="100%" stop-color="#0284c7"/>
+                    </linearGradient>
+                </defs>
+
+                <!-- Braço Esquerdo -->
+                <g class="scroll-robot-arm scroll-robot-arm-left">
+                    <path d="M 15 22 Q 8 19 5 13 C 4 10 7 8 9 11 L 14 18" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M 15 22 Q 8 19 5 13 C 4 10 7 8 9 11 L 14 18" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+
+                <!-- Braço Direito -->
+                <g class="scroll-robot-arm scroll-robot-arm-right">
+                    <path d="M 33 22 Q 40 19 43 13 C 44 10 41 8 39 11 L 34 18" fill="none" stroke="#0f172a" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M 33 22 Q 40 19 43 13 C 44 10 41 8 39 11 L 34 18" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+                </g>
+
+                <!-- Perna Esquerda -->
+                <g class="scroll-robot-leg scroll-robot-leg-left">
+                    <path d="M 18 36 L 14 44 L 8 44" fill="none" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 18 36 L 14 44 L 8 44" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+
+                <!-- Perna Direita -->
+                <g class="scroll-robot-leg scroll-robot-leg-right">
+                    <path d="M 30 36 L 34 44 L 40 44" fill="none" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M 30 36 L 34 44 L 40 44" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+
+                <!-- Corpo / Tronco / Capacete (Visto de Costas) -->
+                <g class="scroll-robot-body">
+                    <!-- Antena -->
+                    <line x1="24" y1="9" x2="24" y2="4" stroke="#0f172a" stroke-width="2.5"/>
+                    <circle cx="24" cy="3" r="2.5" fill="#06b6d4" stroke="#0f172a" stroke-width="1.5"/>
+
+                    <!-- Orelhas Azuis -->
+                    <rect x="8" y="11" width="5" height="9" rx="2.5" fill="url(#botEarGrad)" stroke="#0f172a" stroke-width="1.5"/>
+                    <rect x="35" y="11" width="5" height="9" rx="2.5" fill="url(#botEarGrad)" stroke="#0f172a" stroke-width="1.5"/>
+
+                    <!-- Cabeça (Costas do Capacete) -->
+                    <path d="M 12 16 C 12 8 36 8 36 16 C 36 24 12 24 12 16 Z" fill="url(#botHeadGrad)" stroke="#0f172a" stroke-width="2"/>
+                    <path d="M 24 10 L 24 22" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="2 2"/>
+
+                    <!-- Mochila / Tronco de Costas -->
+                    <path d="M 16 23 L 32 23 C 34 23 35 25 34 28 L 32 37 C 31 39 17 39 16 37 L 14 28 C 13 25 14 23 16 23 Z" fill="url(#botHeadGrad)" stroke="#0f172a" stroke-width="2"/>
+                    <rect x="19" y="26" width="10" height="9" rx="2" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
+                    <circle cx="24" cy="30" r="1.8" fill="#06b6d4"/>
+                </g>
+            </svg>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
