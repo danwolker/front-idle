@@ -184,38 +184,15 @@ document.addEventListener('DOMContentLoaded', () => {
         updateRobotPosition();
     }
 
-    // Image Lightbox & Zoom Feature
+    // Modal Simples de Ampliação de Imagem ao Clicar
     const lightboxModal = document.getElementById('imageLightboxModal');
     const lightboxImg = document.getElementById('lightboxImage');
-    const lightboxTitle = document.getElementById('lightboxTitle');
-    const lightboxDesc = document.getElementById('lightboxDescription');
-    const closeBtn = document.getElementById('lightboxCloseBtn');
+    const closeBtn = document.querySelector('.lightbox-close');
     const backdrop = document.querySelector('.lightbox-backdrop');
-    const zoomInBtn = document.getElementById('zoomInBtn');
-    const zoomOutBtn = document.getElementById('zoomOutBtn');
-    const zoomResetBtn = document.getElementById('zoomResetBtn');
 
-    let currentZoom = 1;
-    const minZoom = 0.8;
-    const maxZoom = 3.2;
-    const zoomStep = 0.3;
-
-    function updateZoom(newZoom) {
-        currentZoom = Math.min(maxZoom, Math.max(minZoom, newZoom));
-        if (lightboxImg) {
-            lightboxImg.style.transform = `scale(${currentZoom})`;
-            lightboxImg.style.cursor = currentZoom > 1 ? 'zoom-out' : 'zoom-in';
-        }
-    }
-
-    function openLightbox(imgSrc, titleText, descText) {
+    function openLightbox(imgSrc) {
         if (!lightboxModal || !lightboxImg) return;
         lightboxImg.src = imgSrc;
-        if (lightboxTitle) lightboxTitle.textContent = titleText;
-        if (lightboxDesc) lightboxDesc.textContent = descText;
-        currentZoom = 1;
-        updateZoom(1);
-
         lightboxModal.classList.add('active');
         lightboxModal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -228,40 +205,18 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    // Attach click listener to module cards
-    document.querySelectorAll('.module-card').forEach(card => {
-        const imgContainer = card.querySelector('.module-img-container');
-        const img = card.querySelector('.module-img');
-        const title = card.querySelector('.module-content h3');
-        const desc = card.querySelector('.module-content p');
-
-        if (imgContainer && img) {
-            // Add zoom hint badge on image hover
-            const hint = document.createElement('div');
-            hint.className = 'img-zoom-hint';
-            hint.innerHTML = '<span>🔍 Clique para ampliar</span>';
-            imgContainer.appendChild(hint);
-
-            imgContainer.addEventListener('click', () => {
-                openLightbox(img.src, title ? title.textContent : '', desc ? desc.textContent : '');
+    // Clique nas imagens dos módulos para abrir
+    document.querySelectorAll('.module-card .module-img-container').forEach(container => {
+        const img = container.querySelector('.module-img');
+        if (img) {
+            container.addEventListener('click', () => {
+                openLightbox(img.src);
             });
         }
     });
 
-    // Zoom Controls
-    if (zoomInBtn) zoomInBtn.addEventListener('click', (e) => { e.stopPropagation(); updateZoom(currentZoom + zoomStep); });
-    if (zoomOutBtn) zoomOutBtn.addEventListener('click', (e) => { e.stopPropagation(); updateZoom(currentZoom - zoomStep); });
-    if (zoomResetBtn) zoomResetBtn.addEventListener('click', (e) => { e.stopPropagation(); updateZoom(1); });
-
-    // Toggle Zoom on clicking image inside modal
-    if (lightboxImg) {
-        lightboxImg.addEventListener('click', (e) => {
-            e.stopPropagation();
-            updateZoom(currentZoom > 1 ? 1 : 1.8);
-        });
-    }
-
-    // Close Modal Events
+    // Fechar ao clicar na imagem, no X ou no fundo
+    if (lightboxImg) lightboxImg.addEventListener('click', closeLightbox);
     if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
     if (backdrop) backdrop.addEventListener('click', closeLightbox);
 

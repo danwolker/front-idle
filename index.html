@@ -1293,30 +1293,12 @@
         </div>
     </div>
 
-    <!-- Modal Lightbox de Ampliação e Zoom dos Módulos -->
+    <!-- Modal Simples de Ampliação da Imagem -->
     <div id="imageLightboxModal" class="lightbox-modal" aria-hidden="true">
         <div class="lightbox-backdrop"></div>
-        <div class="lightbox-container">
-            <!-- Botão Fechar -->
-            <button id="lightboxCloseBtn" class="lightbox-close-btn" aria-label="Fechar ampliação">&times;</button>
-            
-            <!-- Barra de Controles de Zoom -->
-            <div class="lightbox-controls">
-                <button id="zoomInBtn" class="lightbox-control-btn" title="Aumentar Zoom">🔍 +</button>
-                <button id="zoomOutBtn" class="lightbox-control-btn" title="Diminuir Zoom">🔍 -</button>
-                <button id="zoomResetBtn" class="lightbox-control-btn" title="Tamanho Original">↺ Redefinir</button>
-            </div>
-
-            <!-- Conteúdo da Imagem em Zoom -->
-            <div class="lightbox-image-wrapper">
-                <img id="lightboxImage" src="" alt="Ampliação do Módulo" class="lightbox-image">
-            </div>
-
-            <!-- Legenda do Módulo -->
-            <div class="lightbox-caption">
-                <h4 id="lightboxTitle"></h4>
-                <p id="lightboxDescription"></p>
-            </div>
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightboxImage" src="" alt="Imagem ampliada">
         </div>
     </div>
 
