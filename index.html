@@ -93,65 +93,94 @@
             </div>
         </section>
 
-        <!-- Divisor Humano de Seção com Dragãozinho Cuspindo Fogo e Robô -->
+        <!-- Divisor Humano de Seção com Dragãozinho Cuspindo Fogo e Robô com Mochila Jetpack -->
         <div class="section-divider container fade-in-up">
             <div class="divider-line"></div>
             
-            <!-- Dragãozinho Cuspindo Fogo no centro da linha (sem caixa e sem texto) -->
+            <!-- Dragãozinho Boss RPG no centro da linha (Foco em clareza visual) -->
             <div class="divider-badge divider-dragon-badge">
-                <svg class="divider-dragon-svg" viewBox="0 0 52 40">
+                <svg class="divider-dragon-svg" viewBox="0 0 64 48">
                     <defs>
                         <linearGradient id="dragonSkinGrad" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#ef4444"/>
-                            <stop offset="60%" stop-color="#b91c1c"/>
-                            <stop offset="100%" stop-color="#7f1d1d"/>
+                            <stop offset="0%" stop-color="#ff4d4d"/>
+                            <stop offset="60%" stop-color="#cc1111"/>
+                            <stop offset="100%" stop-color="#770000"/>
                         </linearGradient>
                         <linearGradient id="dragonWingGrad" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#f97316"/>
-                            <stop offset="100%" stop-color="#dc2626"/>
+                            <stop offset="0%" stop-color="#ff7700"/>
+                            <stop offset="100%" stop-color="#b30000"/>
                         </linearGradient>
-                        <linearGradient id="dragonFireGrad" x1="0" y1="0" x2="1" y2="0">
-                            <stop offset="0%" stop-color="#fef08a"/>
-                            <stop offset="30%" stop-color="#f97316"/>
-                            <stop offset="70%" stop-color="#ef4444"/>
+                        <linearGradient id="dragonFireStream" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="20%" stop-color="#ffea00"/>
+                            <stop offset="60%" stop-color="#ff5500"/>
                             <stop offset="100%" stop-color="transparent"/>
                         </linearGradient>
                     </defs>
-                    <!-- Jato de Fogo Cuspindo -->
+
+                    <!-- Jato de Fogo da Boca do Dragão -->
                     <g class="dragon-fire-breath">
-                        <path class="fire-flame-main" d="M 32 18 Q 38 12 46 15 Q 52 18 47 22 Q 40 25 32 20 Z" fill="url(#dragonFireGrad)"/>
-                        <circle class="fire-spark fire-spark-1" cx="44" cy="14" r="1.5" fill="#fde047"/>
-                        <circle class="fire-spark fire-spark-2" cx="48" cy="20" r="1.2" fill="#f97316"/>
-                        <circle class="fire-spark fire-spark-3" cx="51" cy="16" r="1.8" fill="#ef4444"/>
+                        <path d="M 38 23 Q 46 16 54 20 Q 62 23 56 27 Q 48 30 38 25 Z" fill="url(#dragonFireStream)"/>
+                        <circle class="fire-spark fire-spark-1" cx="50" cy="18" r="1.5" fill="#ffffff"/>
+                        <circle class="fire-spark fire-spark-2" cx="56" cy="24" r="1.8" fill="#ffea00"/>
+                        <circle class="fire-spark fire-spark-3" cx="60" cy="21" r="1.2" fill="#ff3300"/>
                     </g>
+
                     <!-- Asa Traseira -->
                     <g class="dragon-wing dragon-wing-back">
-                        <path d="M 18 16 C 13 7, 4 9, 7 18 C 11 18, 16 20, 18 20 Z" fill="url(#dragonWingGrad)" stroke="#450a0a" stroke-width="1.2"/>
+                        <path d="M 22 20 C 18 8, 8 10, 10 22 C 15 22, 20 24, 22 24 Z" fill="url(#dragonWingGrad)" stroke="#3a0000" stroke-width="1.2"/>
+                        <path d="M 10 22 L 14 14 M 10 22 L 18 16" stroke="#aa0000" stroke-width="0.8"/>
                     </g>
-                    <path d="M 25 24 Q 31 26 33 22 Q 35 25 32 27 Q 27 28 23 25 Z" fill="#991b1b" stroke="#450a0a" stroke-width="1"/>
-                    <ellipse cx="20" cy="22" rx="8" ry="7" fill="url(#dragonSkinGrad)" stroke="#450a0a" stroke-width="1.5"/>
-                    <path d="M 15 20 Q 19 27 24 23 Q 19 19 15 20 Z" fill="#fde047" opacity="0.9"/>
-                    <!-- Cabeça de Dragão -->
+
+                    <!-- Cauda Curvada de Dragão com Espinho -->
+                    <path d="M 16 28 C 10 32, 6 26, 4 30 C 2 34, 6 36, 9 34 Z" fill="#990000" stroke="#3a0000" stroke-width="1.2"/>
+                    <path d="M 3 30 L 0 28 L 2 33 Z" fill="#ff4d4d" stroke="#3a0000" stroke-width="1"/>
+
+                    <!-- Corpo e Peitoral de Dragão -->
+                    <path d="M 16 25 Q 20 20 26 22 Q 28 28 24 33 Q 18 35 16 25 Z" fill="url(#dragonSkinGrad)" stroke="#3a0000" stroke-width="1.5"/>
+                    <path d="M 22 24 Q 25 28 23 32" stroke="#ffea00" stroke-width="1.2" fill="none" opacity="0.8"/>
+
+                    <!-- Espinhos Dorsais -->
+                    <polygon points="17,21 15,17 19,19" fill="#ff9900" stroke="#3a0000" stroke-width="0.8"/>
+                    <polygon points="14,24 12,20 16,22" fill="#ff9900" stroke="#3a0000" stroke-width="0.8"/>
+
+                    <!-- Cabeça de Dragão com Chifres e Focinho -->
                     <g class="dragon-head">
-                        <path d="M 16 18 Q 23 10 28 14 Q 31 18 27 21 Q 23 22 17 20 Z" fill="url(#dragonSkinGrad)" stroke="#450a0a" stroke-width="1.5"/>
-                        <path d="M 17 14 Q 14 8 11 10 Z" fill="#f59e0b" stroke="#450a0a" stroke-width="1"/>
-                        <circle cx="24" cy="15" r="2" fill="#facc15"/>
-                        <circle cx="24.5" cy="15" r="0.9" fill="#dc2626"/>
-                        <path d="M 27 19 Q 30 19 28 21 Z" fill="#450a0a"/>
+                        <path d="M 23 15 C 20 8, 14 6, 12 8 Q 17 11 21 16 Z" fill="#ffea00" stroke="#3a0000" stroke-width="1"/>
+                        <path d="M 22 17 C 19 12, 15 11, 13 13 Q 17 14 20 18 Z" fill="#ff9900" stroke="#3a0000" stroke-width="0.8"/>
+
+                        <path d="M 20 18 L 29 13 Q 36 15 38 21 Q 34 23 28 22 L 20 23 Z" fill="url(#dragonSkinGrad)" stroke="#3a0000" stroke-width="1.5"/>
+                        <path d="M 27 24 L 37 25 Q 35 28 30 27 Z" fill="#990000" stroke="#3a0000" stroke-width="1.2"/>
+                        <polygon points="34,22 36,22 35,24" fill="#ffffff"/>
+
+                        <ellipse cx="28" cy="17" rx="2.5" ry="3" fill="#ffea00"/>
+                        <ellipse cx="28.5" cy="17" rx="0.8" ry="2" fill="#000000"/>
+                        <circle cx="27.5" cy="15.5" r="0.7" fill="#ffffff"/>
                     </g>
+
                     <!-- Asa Dianteira -->
                     <g class="dragon-wing dragon-wing-front">
-                        <path d="M 21 17 C 16 6, 6 9, 10 19 C 14 19, 19 21, 21 19 Z" fill="url(#dragonWingGrad)" stroke="#450a0a" stroke-width="1.2"/>
+                        <path d="M 24 21 C 18 5, 6 8, 9 22 C 16 21, 21 24, 24 23 Z" fill="url(#dragonWingGrad)" stroke="#3a0000" stroke-width="1.5"/>
+                        <path d="M 9 22 L 14 12 M 9 22 L 19 14 M 9 22 L 23 18" stroke="#ff7700" stroke-width="1" opacity="0.9"/>
+                        <path d="M 6 8 L 4 6 L 7 10 Z" fill="#ffea00"/>
                     </g>
-                    <path d="M 16 27 L 14 31 L 18 31 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
-                    <path d="M 23 27 L 22 31 L 26 31 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
+
+                    <!-- Patas e Garras -->
+                    <g class="dragon-legs">
+                        <path d="M 18 32 L 16 38 L 12 38 Q 15 36 18 35" fill="none" stroke="#3a0000" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 18 32 L 16 38 L 12 38" fill="none" stroke="#cc1111" stroke-width="1.8" stroke-linecap="round"/>
+
+                        <path d="M 25 32 L 23 38 L 19 38 Q 22 36 25 35" fill="none" stroke="#3a0000" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 25 32 L 23 38 L 19 38" fill="none" stroke="#cc1111" stroke-width="1.8" stroke-linecap="round"/>
+                    </g>
                 </svg>
             </div>
 
             <div class="divider-line"></div>
             
+            <!-- Robozinho com Mochila Jetpack visível nas costas -->
             <div class="divider-walking-robot">
-                <svg class="divider-robot-svg" viewBox="0 0 40 46">
+                <svg class="divider-robot-svg" viewBox="0 0 44 48">
                     <defs>
                         <linearGradient id="divBotHeadGrad" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="0%" stop-color="#ffffff"/>
@@ -161,43 +190,65 @@
                             <stop offset="0%" stop-color="#3b82f6"/>
                             <stop offset="100%" stop-color="#0284c7"/>
                         </linearGradient>
+                        <linearGradient id="jetpackGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#64748b"/>
+                            <stop offset="50%" stop-color="#334155"/>
+                            <stop offset="100%" stop-color="#1e293b"/>
+                        </linearGradient>
                         <linearGradient id="jetFlameGrad" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#06b6d4"/>
-                            <stop offset="50%" stop-color="#3b82f6"/>
+                            <stop offset="0%" stop-color="#38bdf8"/>
+                            <stop offset="40%" stop-color="#3b82f6"/>
                             <stop offset="100%" stop-color="transparent"/>
                         </linearGradient>
                     </defs>
+
+                    <!-- Fogo dos Propulsores saindo diretamente da Mochila Jetpack -->
                     <g class="robot-jetpack-flame">
-                        <path d="M 18 30 Q 16 38 17 44 Q 20 40 21 44 Q 22 38 20 30 Z" fill="url(#jetFlameGrad)"/>
-                        <circle cx="19" cy="33" r="2.5" fill="#ffffff"/>
+                        <path d="M 23 29 Q 20 38 22 46 Q 26 41 27 46 Q 29 37 27 29 Z" fill="url(#jetFlameGrad)"/>
+                        <circle cx="24.5" cy="32" r="2.5" fill="#ffffff"/>
                     </g>
+
+                    <!-- Mochila Jetpack visível nas costas do Robô -->
+                    <g class="robot-jetpack-backpack">
+                        <rect x="23" y="14" width="8" height="15" rx="3.5" fill="url(#jetpackGrad)" stroke="#0f172a" stroke-width="1.5"/>
+                        <line x1="23" y1="19" x2="31" y2="19" stroke="#94a3b8" stroke-width="1"/>
+                        <circle cx="27" cy="16" r="1" fill="#38bdf8"/>
+                        <path d="M 24 28 L 29 28 L 30 31 L 23 31 Z" fill="#0f172a"/>
+                    </g>
+
+                    <!-- Perna Traseira -->
                     <g class="divider-robot-leg divider-robot-leg-back">
-                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 20 28 L 24 38 L 27 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 20 28 L 24 38 L 27 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
+                    <!-- Braço Traseiro -->
                     <g class="divider-robot-arm divider-robot-arm-back">
-                        <path d="M 22 19 L 27 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 22 19 L 27 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 20 19 L 25 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 20 19 L 25 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <rect x="23" y="18" width="5" height="10" rx="2" fill="#3b82f6" stroke="#0f172a" stroke-width="1.2"/>
+
+                    <!-- Corpo / Cabeça / Capacete -->
                     <g class="divider-robot-body">
-                        <line x1="20" y1="7" x2="20" y2="2" stroke="#0f172a" stroke-width="2"/>
-                        <circle cx="20" cy="2" r="2" fill="#06b6d4"/>
-                        <circle cx="20" cy="13" r="8" fill="url(#divBotHeadGrad)" stroke="#0f172a" stroke-width="1.8"/>
-                        <path d="M 17 7 Q 21 6 24 9" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                        <path d="M 12 12 Q 13 9 17 9 Q 18 13 17 15 Q 13 16 12 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
-                        <circle cx="14" cy="12" r="0.8" fill="#ffffff"/>
-                        <rect x="25" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad)" stroke="#0f172a" stroke-width="1"/>
-                        <path d="M 15 20 L 25 20 L 23 29 L 17 29 Z" fill="url(#divBotHeadGrad)" stroke="#0f172a" stroke-width="1.8"/>
-                        <circle cx="18" cy="24" r="1.5" fill="#3b82f6"/>
+                        <line x1="17" y1="7" x2="17" y2="2" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="17" cy="2" r="2" fill="#06b6d4"/>
+                        <circle cx="17" cy="13" r="8" fill="url(#divBotHeadGrad)" stroke="#0f172a" stroke-width="1.8"/>
+                        <path d="M 14 7 Q 18 6 21 9" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                        <path d="M 9 12 Q 10 9 14 9 Q 15 13 14 15 Q 10 16 9 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+                        <circle cx="11" cy="12" r="0.8" fill="#ffffff"/>
+                        <rect x="22" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad)" stroke="#0f172a" stroke-width="1"/>
+                        <path d="M 12 20 L 22 20 L 20 29 L 14 29 Z" fill="url(#divBotHeadGrad)" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="15" cy="24" r="1.5" fill="#3b82f6"/>
                     </g>
+
+                    <!-- Perna Dianteira -->
                     <g class="divider-robot-leg divider-robot-leg-front">
-                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 16 28 L 12 38 L 8 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 16 28 L 12 38 L 8 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
+                    <!-- Braço Dianteiro -->
                     <g class="divider-robot-arm divider-robot-arm-front">
-                        <path d="M 18 19 L 12 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 18 19 L 12 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 16 19 L 10 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 16 19 L 10 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
                 </svg>
             </div>
@@ -232,60 +283,84 @@
             </div>
         </section>
 
-        <!-- Divisor Humano de Seção com Dragãozinho Cuspindo Fogo e Robô -->
+        <!-- Divisor Humano de Seção com Dragãozinho Cuspindo Fogo e Robô com Mochila Jetpack -->
         <div class="section-divider container fade-in-up">
             <div class="divider-line"></div>
             
             <div class="divider-badge divider-dragon-badge">
-                <svg class="divider-dragon-svg" viewBox="0 0 52 40">
+                <svg class="divider-dragon-svg" viewBox="0 0 64 48">
                     <defs>
                         <linearGradient id="dragonSkinGrad2" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#ef4444"/>
-                            <stop offset="60%" stop-color="#b91c1c"/>
-                            <stop offset="100%" stop-color="#7f1d1d"/>
+                            <stop offset="0%" stop-color="#ff4d4d"/>
+                            <stop offset="60%" stop-color="#cc1111"/>
+                            <stop offset="100%" stop-color="#770000"/>
                         </linearGradient>
                         <linearGradient id="dragonWingGrad2" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#f97316"/>
-                            <stop offset="100%" stop-color="#dc2626"/>
+                            <stop offset="0%" stop-color="#ff7700"/>
+                            <stop offset="100%" stop-color="#b30000"/>
                         </linearGradient>
-                        <linearGradient id="dragonFireGrad2" x1="0" y1="0" x2="1" y2="0">
-                            <stop offset="0%" stop-color="#fef08a"/>
-                            <stop offset="30%" stop-color="#f97316"/>
-                            <stop offset="70%" stop-color="#ef4444"/>
+                        <linearGradient id="dragonFireStream2" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="20%" stop-color="#ffea00"/>
+                            <stop offset="60%" stop-color="#ff5500"/>
                             <stop offset="100%" stop-color="transparent"/>
                         </linearGradient>
                     </defs>
+
                     <g class="dragon-fire-breath">
-                        <path class="fire-flame-main" d="M 32 18 Q 38 12 46 15 Q 52 18 47 22 Q 40 25 32 20 Z" fill="url(#dragonFireGrad2)"/>
-                        <circle class="fire-spark fire-spark-1" cx="44" cy="14" r="1.5" fill="#fde047"/>
-                        <circle class="fire-spark fire-spark-2" cx="48" cy="20" r="1.2" fill="#f97316"/>
-                        <circle class="fire-spark fire-spark-3" cx="51" cy="16" r="1.8" fill="#ef4444"/>
+                        <path d="M 38 23 Q 46 16 54 20 Q 62 23 56 27 Q 48 30 38 25 Z" fill="url(#dragonFireStream2)"/>
+                        <circle class="fire-spark fire-spark-1" cx="50" cy="18" r="1.5" fill="#ffffff"/>
+                        <circle class="fire-spark fire-spark-2" cx="56" cy="24" r="1.8" fill="#ffea00"/>
+                        <circle class="fire-spark fire-spark-3" cx="60" cy="21" r="1.2" fill="#ff3300"/>
                     </g>
+
                     <g class="dragon-wing dragon-wing-back">
-                        <path d="M 18 16 C 13 7, 4 9, 7 18 C 11 18, 16 20, 18 20 Z" fill="url(#dragonWingGrad2)" stroke="#450a0a" stroke-width="1.2"/>
+                        <path d="M 22 20 C 18 8, 8 10, 10 22 C 15 22, 20 24, 22 24 Z" fill="url(#dragonWingGrad2)" stroke="#3a0000" stroke-width="1.2"/>
+                        <path d="M 10 22 L 14 14 M 10 22 L 18 16" stroke="#aa0000" stroke-width="0.8"/>
                     </g>
-                    <path d="M 25 24 Q 31 26 33 22 Q 35 25 32 27 Q 27 28 23 25 Z" fill="#991b1b" stroke="#450a0a" stroke-width="1"/>
-                    <ellipse cx="20" cy="22" rx="8" ry="7" fill="url(#dragonSkinGrad2)" stroke="#450a0a" stroke-width="1.5"/>
-                    <path d="M 15 20 Q 19 27 24 23 Q 19 19 15 20 Z" fill="#fde047" opacity="0.9"/>
+
+                    <path d="M 16 28 C 10 32, 6 26, 4 30 C 2 34, 6 36, 9 34 Z" fill="#990000" stroke="#3a0000" stroke-width="1.2"/>
+                    <path d="M 3 30 L 0 28 L 2 33 Z" fill="#ff4d4d" stroke="#3a0000" stroke-width="1"/>
+
+                    <path d="M 16 25 Q 20 20 26 22 Q 28 28 24 33 Q 18 35 16 25 Z" fill="url(#dragonSkinGrad2)" stroke="#3a0000" stroke-width="1.5"/>
+                    <path d="M 22 24 Q 25 28 23 32" stroke="#ffea00" stroke-width="1.2" fill="none" opacity="0.8"/>
+
+                    <polygon points="17,21 15,17 19,19" fill="#ff9900" stroke="#3a0000" stroke-width="0.8"/>
+                    <polygon points="14,24 12,20 16,22" fill="#ff9900" stroke="#3a0000" stroke-width="0.8"/>
+
                     <g class="dragon-head">
-                        <path d="M 16 18 Q 23 10 28 14 Q 31 18 27 21 Q 23 22 17 20 Z" fill="url(#dragonSkinGrad2)" stroke="#450a0a" stroke-width="1.5"/>
-                        <path d="M 17 14 Q 14 8 11 10 Z" fill="#f59e0b" stroke="#450a0a" stroke-width="1"/>
-                        <circle cx="24" cy="15" r="2" fill="#facc15"/>
-                        <circle cx="24.5" cy="15" r="0.9" fill="#dc2626"/>
-                        <path d="M 27 19 Q 30 19 28 21 Z" fill="#450a0a"/>
+                        <path d="M 23 15 C 20 8, 14 6, 12 8 Q 17 11 21 16 Z" fill="#ffea00" stroke="#3a0000" stroke-width="1"/>
+                        <path d="M 22 17 C 19 12, 15 11, 13 13 Q 17 14 20 18 Z" fill="#ff9900" stroke="#3a0000" stroke-width="0.8"/>
+
+                        <path d="M 20 18 L 29 13 Q 36 15 38 21 Q 34 23 28 22 L 20 23 Z" fill="url(#dragonSkinGrad2)" stroke="#3a0000" stroke-width="1.5"/>
+                        <path d="M 27 24 L 37 25 Q 35 28 30 27 Z" fill="#990000" stroke="#3a0000" stroke-width="1.2"/>
+                        <polygon points="34,22 36,22 35,24" fill="#ffffff"/>
+
+                        <ellipse cx="28" cy="17" rx="2.5" ry="3" fill="#ffea00"/>
+                        <ellipse cx="28.5" cy="17" rx="0.8" ry="2" fill="#000000"/>
+                        <circle cx="27.5" cy="15.5" r="0.7" fill="#ffffff"/>
                     </g>
+
                     <g class="dragon-wing dragon-wing-front">
-                        <path d="M 21 17 C 16 6, 6 9, 10 19 C 14 19, 19 21, 21 19 Z" fill="url(#dragonWingGrad2)" stroke="#450a0a" stroke-width="1.2"/>
+                        <path d="M 24 21 C 18 5, 6 8, 9 22 C 16 21, 21 24, 24 23 Z" fill="url(#dragonWingGrad2)" stroke="#3a0000" stroke-width="1.5"/>
+                        <path d="M 9 22 L 14 12 M 9 22 L 19 14 M 9 22 L 23 18" stroke="#ff7700" stroke-width="1" opacity="0.9"/>
+                        <path d="M 6 8 L 4 6 L 7 10 Z" fill="#ffea00"/>
                     </g>
-                    <path d="M 16 27 L 14 31 L 18 31 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
-                    <path d="M 23 27 L 22 31 L 26 31 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
+
+                    <g class="dragon-legs">
+                        <path d="M 18 32 L 16 38 L 12 38 Q 15 36 18 35" fill="none" stroke="#3a0000" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 18 32 L 16 38 L 12 38" fill="none" stroke="#cc1111" stroke-width="1.8" stroke-linecap="round"/>
+
+                        <path d="M 25 32 L 23 38 L 19 38 Q 22 36 25 35" fill="none" stroke="#3a0000" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 25 32 L 23 38 L 19 38" fill="none" stroke="#cc1111" stroke-width="1.8" stroke-linecap="round"/>
+                    </g>
                 </svg>
             </div>
 
             <div class="divider-line"></div>
             
             <div class="divider-walking-robot">
-                <svg class="divider-robot-svg" viewBox="0 0 40 46">
+                <svg class="divider-robot-svg" viewBox="0 0 44 48">
                     <defs>
                         <linearGradient id="divBotHeadGrad2" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="0%" stop-color="#ffffff"/>
@@ -295,43 +370,58 @@
                             <stop offset="0%" stop-color="#3b82f6"/>
                             <stop offset="100%" stop-color="#0284c7"/>
                         </linearGradient>
+                        <linearGradient id="jetpackGrad2" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#64748b"/>
+                            <stop offset="50%" stop-color="#334155"/>
+                            <stop offset="100%" stop-color="#1e293b"/>
+                        </linearGradient>
                         <linearGradient id="jetFlameGrad2" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#06b6d4"/>
-                            <stop offset="50%" stop-color="#3b82f6"/>
+                            <stop offset="0%" stop-color="#38bdf8"/>
+                            <stop offset="40%" stop-color="#3b82f6"/>
                             <stop offset="100%" stop-color="transparent"/>
                         </linearGradient>
                     </defs>
+
                     <g class="robot-jetpack-flame">
-                        <path d="M 18 30 Q 16 38 17 44 Q 20 40 21 44 Q 22 38 20 30 Z" fill="url(#jetFlameGrad2)"/>
-                        <circle cx="19" cy="33" r="2.5" fill="#ffffff"/>
+                        <path d="M 23 29 Q 20 38 22 46 Q 26 41 27 46 Q 29 37 27 29 Z" fill="url(#jetFlameGrad2)"/>
+                        <circle cx="24.5" cy="32" r="2.5" fill="#ffffff"/>
                     </g>
+
+                    <g class="robot-jetpack-backpack">
+                        <rect x="23" y="14" width="8" height="15" rx="3.5" fill="url(#jetpackGrad2)" stroke="#0f172a" stroke-width="1.5"/>
+                        <line x1="23" y1="19" x2="31" y2="19" stroke="#94a3b8" stroke-width="1"/>
+                        <circle cx="27" cy="16" r="1" fill="#38bdf8"/>
+                        <path d="M 24 28 L 29 28 L 30 31 L 23 31 Z" fill="#0f172a"/>
+                    </g>
+
                     <g class="divider-robot-leg divider-robot-leg-back">
-                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 20 28 L 24 38 L 27 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 20 28 L 24 38 L 27 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
                     <g class="divider-robot-arm divider-robot-arm-back">
-                        <path d="M 22 19 L 27 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 22 19 L 27 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 20 19 L 25 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 20 19 L 25 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <rect x="23" y="18" width="5" height="10" rx="2" fill="#3b82f6" stroke="#0f172a" stroke-width="1.2"/>
+
                     <g class="divider-robot-body">
-                        <line x1="20" y1="7" x2="20" y2="2" stroke="#0f172a" stroke-width="2"/>
-                        <circle cx="20" cy="2" r="2" fill="#06b6d4"/>
-                        <circle cx="20" cy="13" r="8" fill="url(#divBotHeadGrad2)" stroke="#0f172a" stroke-width="1.8"/>
-                        <path d="M 17 7 Q 21 6 24 9" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                        <path d="M 12 12 Q 13 9 17 9 Q 18 13 17 15 Q 13 16 12 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
-                        <circle cx="14" cy="12" r="0.8" fill="#ffffff"/>
-                        <rect x="25" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad2)" stroke="#0f172a" stroke-width="1"/>
-                        <path d="M 15 20 L 25 20 L 23 29 L 17 29 Z" fill="url(#divBotHeadGrad2)" stroke="#0f172a" stroke-width="1.8"/>
-                        <circle cx="18" cy="24" r="1.5" fill="#3b82f6"/>
+                        <line x1="17" y1="7" x2="17" y2="2" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="17" cy="2" r="2" fill="#06b6d4"/>
+                        <circle cx="17" cy="13" r="8" fill="url(#divBotHeadGrad2)" stroke="#0f172a" stroke-width="1.8"/>
+                        <path d="M 14 7 Q 18 6 21 9" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                        <path d="M 9 12 Q 10 9 14 9 Q 15 13 14 15 Q 10 16 9 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+                        <circle cx="11" cy="12" r="0.8" fill="#ffffff"/>
+                        <rect x="22" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad2)" stroke="#0f172a" stroke-width="1"/>
+                        <path d="M 12 20 L 22 20 L 20 29 L 14 29 Z" fill="url(#divBotHeadGrad2)" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="15" cy="24" r="1.5" fill="#3b82f6"/>
                     </g>
+
                     <g class="divider-robot-leg divider-robot-leg-front">
-                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 16 28 L 12 38 L 8 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 16 28 L 12 38 L 8 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
                     <g class="divider-robot-arm divider-robot-arm-front">
-                        <path d="M 18 19 L 12 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 18 19 L 12 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 16 19 L 10 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 16 19 L 10 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
                 </svg>
             </div>
@@ -586,60 +676,84 @@
             </div>
         </section>
 
-        <!-- Divisor Humano de Seção com Dragãozinho Cuspindo Fogo e Robô -->
+        <!-- Divisor Humano de Seção com Dragãozinho Cuspindo Fogo e Robô com Mochila Jetpack -->
         <div class="section-divider container fade-in-up">
             <div class="divider-line"></div>
             
             <div class="divider-badge divider-dragon-badge">
-                <svg class="divider-dragon-svg" viewBox="0 0 52 40">
+                <svg class="divider-dragon-svg" viewBox="0 0 64 48">
                     <defs>
                         <linearGradient id="dragonSkinGrad3" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#ef4444"/>
-                            <stop offset="60%" stop-color="#b91c1c"/>
-                            <stop offset="100%" stop-color="#7f1d1d"/>
+                            <stop offset="0%" stop-color="#ff4d4d"/>
+                            <stop offset="60%" stop-color="#cc1111"/>
+                            <stop offset="100%" stop-color="#770000"/>
                         </linearGradient>
                         <linearGradient id="dragonWingGrad3" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#f97316"/>
-                            <stop offset="100%" stop-color="#dc2626"/>
+                            <stop offset="0%" stop-color="#ff7700"/>
+                            <stop offset="100%" stop-color="#b30000"/>
                         </linearGradient>
-                        <linearGradient id="dragonFireGrad3" x1="0" y1="0" x2="1" y2="0">
-                            <stop offset="0%" stop-color="#fef08a"/>
-                            <stop offset="30%" stop-color="#f97316"/>
-                            <stop offset="70%" stop-color="#ef4444"/>
+                        <linearGradient id="dragonFireStream3" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="20%" stop-color="#ffea00"/>
+                            <stop offset="60%" stop-color="#ff5500"/>
                             <stop offset="100%" stop-color="transparent"/>
                         </linearGradient>
                     </defs>
+
                     <g class="dragon-fire-breath">
-                        <path class="fire-flame-main" d="M 32 18 Q 38 12 46 15 Q 52 18 47 22 Q 40 25 32 20 Z" fill="url(#dragonFireGrad3)"/>
-                        <circle class="fire-spark fire-spark-1" cx="44" cy="14" r="1.5" fill="#fde047"/>
-                        <circle class="fire-spark fire-spark-2" cx="48" cy="20" r="1.2" fill="#f97316"/>
-                        <circle class="fire-spark fire-spark-3" cx="51" cy="16" r="1.8" fill="#ef4444"/>
+                        <path d="M 38 23 Q 46 16 54 20 Q 62 23 56 27 Q 48 30 38 25 Z" fill="url(#dragonFireStream3)"/>
+                        <circle class="fire-spark fire-spark-1" cx="50" cy="18" r="1.5" fill="#ffffff"/>
+                        <circle class="fire-spark fire-spark-2" cx="56" cy="24" r="1.8" fill="#ffea00"/>
+                        <circle class="fire-spark fire-spark-3" cx="60" cy="21" r="1.2" fill="#ff3300"/>
                     </g>
+
                     <g class="dragon-wing dragon-wing-back">
-                        <path d="M 18 16 C 13 7, 4 9, 7 18 C 11 18, 16 20, 18 20 Z" fill="url(#dragonWingGrad3)" stroke="#450a0a" stroke-width="1.2"/>
+                        <path d="M 22 20 C 18 8, 8 10, 10 22 C 15 22, 20 24, 22 24 Z" fill="url(#dragonWingGrad3)" stroke="#3a0000" stroke-width="1.2"/>
+                        <path d="M 10 22 L 14 14 M 10 22 L 18 16" stroke="#aa0000" stroke-width="0.8"/>
                     </g>
-                    <path d="M 25 24 Q 31 26 33 22 Q 35 25 32 27 Q 27 28 23 25 Z" fill="#991b1b" stroke="#450a0a" stroke-width="1"/>
-                    <ellipse cx="20" cy="22" rx="8" ry="7" fill="url(#dragonSkinGrad3)" stroke="#450a0a" stroke-width="1.5"/>
-                    <path d="M 15 20 Q 19 27 24 23 Q 19 19 15 20 Z" fill="#fde047" opacity="0.9"/>
+
+                    <path d="M 16 28 C 10 32, 6 26, 4 30 C 2 34, 6 36, 9 34 Z" fill="#990000" stroke="#3a0000" stroke-width="1.2"/>
+                    <path d="M 3 30 L 0 28 L 2 33 Z" fill="#ff4d4d" stroke="#3a0000" stroke-width="1"/>
+
+                    <path d="M 16 25 Q 20 20 26 22 Q 28 28 24 33 Q 18 35 16 25 Z" fill="url(#dragonSkinGrad3)" stroke="#3a0000" stroke-width="1.5"/>
+                    <path d="M 22 24 Q 25 28 23 32" stroke="#ffea00" stroke-width="1.2" fill="none" opacity="0.8"/>
+
+                    <polygon points="17,21 15,17 19,19" fill="#ff9900" stroke="#3a0000" stroke-width="0.8"/>
+                    <polygon points="14,24 12,20 16,22" fill="#ff9900" stroke="#3a0000" stroke-width="0.8"/>
+
                     <g class="dragon-head">
-                        <path d="M 16 18 Q 23 10 28 14 Q 31 18 27 21 Q 23 22 17 20 Z" fill="url(#dragonSkinGrad3)" stroke="#450a0a" stroke-width="1.5"/>
-                        <path d="M 17 14 Q 14 8 11 10 Z" fill="#f59e0b" stroke="#450a0a" stroke-width="1"/>
-                        <circle cx="24" cy="15" r="2" fill="#facc15"/>
-                        <circle cx="24.5" cy="15" r="0.9" fill="#dc2626"/>
-                        <path d="M 27 19 Q 30 19 28 21 Z" fill="#450a0a"/>
+                        <path d="M 23 15 C 20 8, 14 6, 12 8 Q 17 11 21 16 Z" fill="#ffea00" stroke="#3a0000" stroke-width="1"/>
+                        <path d="M 22 17 C 19 12, 15 11, 13 13 Q 17 14 20 18 Z" fill="#ff9900" stroke="#3a0000" stroke-width="0.8"/>
+
+                        <path d="M 20 18 L 29 13 Q 36 15 38 21 Q 34 23 28 22 L 20 23 Z" fill="url(#dragonSkinGrad3)" stroke="#3a0000" stroke-width="1.5"/>
+                        <path d="M 27 24 L 37 25 Q 35 28 30 27 Z" fill="#990000" stroke="#3a0000" stroke-width="1.2"/>
+                        <polygon points="34,22 36,22 35,24" fill="#ffffff"/>
+
+                        <ellipse cx="28" cy="17" rx="2.5" ry="3" fill="#ffea00"/>
+                        <ellipse cx="28.5" cy="17" rx="0.8" ry="2" fill="#000000"/>
+                        <circle cx="27.5" cy="15.5" r="0.7" fill="#ffffff"/>
                     </g>
+
                     <g class="dragon-wing dragon-wing-front">
-                        <path d="M 21 17 C 16 6, 6 9, 10 19 C 14 19, 19 21, 21 19 Z" fill="url(#dragonWingGrad3)" stroke="#450a0a" stroke-width="1.2"/>
+                        <path d="M 24 21 C 18 5, 6 8, 9 22 C 16 21, 21 24, 24 23 Z" fill="url(#dragonWingGrad3)" stroke="#3a0000" stroke-width="1.5"/>
+                        <path d="M 9 22 L 14 12 M 9 22 L 19 14 M 9 22 L 23 18" stroke="#ff7700" stroke-width="1" opacity="0.9"/>
+                        <path d="M 6 8 L 4 6 L 7 10 Z" fill="#ffea00"/>
                     </g>
-                    <path d="M 16 27 L 14 31 L 18 31 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
-                    <path d="M 23 27 L 22 31 L 26 31 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
+
+                    <g class="dragon-legs">
+                        <path d="M 18 32 L 16 38 L 12 38 Q 15 36 18 35" fill="none" stroke="#3a0000" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 18 32 L 16 38 L 12 38" fill="none" stroke="#cc1111" stroke-width="1.8" stroke-linecap="round"/>
+
+                        <path d="M 25 32 L 23 38 L 19 38 Q 22 36 25 35" fill="none" stroke="#3a0000" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 25 32 L 23 38 L 19 38" fill="none" stroke="#cc1111" stroke-width="1.8" stroke-linecap="round"/>
+                    </g>
                 </svg>
             </div>
 
             <div class="divider-line"></div>
             
             <div class="divider-walking-robot">
-                <svg class="divider-robot-svg" viewBox="0 0 40 46">
+                <svg class="divider-robot-svg" viewBox="0 0 44 48">
                     <defs>
                         <linearGradient id="divBotHeadGrad3" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="0%" stop-color="#ffffff"/>
@@ -649,43 +763,58 @@
                             <stop offset="0%" stop-color="#3b82f6"/>
                             <stop offset="100%" stop-color="#0284c7"/>
                         </linearGradient>
+                        <linearGradient id="jetpackGrad3" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#64748b"/>
+                            <stop offset="50%" stop-color="#334155"/>
+                            <stop offset="100%" stop-color="#1e293b"/>
+                        </linearGradient>
                         <linearGradient id="jetFlameGrad3" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#06b6d4"/>
-                            <stop offset="50%" stop-color="#3b82f6"/>
+                            <stop offset="0%" stop-color="#38bdf8"/>
+                            <stop offset="40%" stop-color="#3b82f6"/>
                             <stop offset="100%" stop-color="transparent"/>
                         </linearGradient>
                     </defs>
+
                     <g class="robot-jetpack-flame">
-                        <path d="M 18 30 Q 16 38 17 44 Q 20 40 21 44 Q 22 38 20 30 Z" fill="url(#jetFlameGrad3)"/>
-                        <circle cx="19" cy="33" r="2.5" fill="#ffffff"/>
+                        <path d="M 23 29 Q 20 38 22 46 Q 26 41 27 46 Q 29 37 27 29 Z" fill="url(#jetFlameGrad3)"/>
+                        <circle cx="24.5" cy="32" r="2.5" fill="#ffffff"/>
                     </g>
+
+                    <g class="robot-jetpack-backpack">
+                        <rect x="23" y="14" width="8" height="15" rx="3.5" fill="url(#jetpackGrad3)" stroke="#0f172a" stroke-width="1.5"/>
+                        <line x1="23" y1="19" x2="31" y2="19" stroke="#94a3b8" stroke-width="1"/>
+                        <circle cx="27" cy="16" r="1" fill="#38bdf8"/>
+                        <path d="M 24 28 L 29 28 L 30 31 L 23 31 Z" fill="#0f172a"/>
+                    </g>
+
                     <g class="divider-robot-leg divider-robot-leg-back">
-                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 20 28 L 24 38 L 27 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 20 28 L 24 38 L 27 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
                     <g class="divider-robot-arm divider-robot-arm-back">
-                        <path d="M 22 19 L 27 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 22 19 L 27 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 20 19 L 25 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 20 19 L 25 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <rect x="23" y="18" width="5" height="10" rx="2" fill="#3b82f6" stroke="#0f172a" stroke-width="1.2"/>
+
                     <g class="divider-robot-body">
-                        <line x1="20" y1="7" x2="20" y2="2" stroke="#0f172a" stroke-width="2"/>
-                        <circle cx="20" cy="2" r="2" fill="#06b6d4"/>
-                        <circle cx="20" cy="13" r="8" fill="url(#divBotHeadGrad3)" stroke="#0f172a" stroke-width="1.8"/>
-                        <path d="M 17 7 Q 21 6 24 9" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                        <path d="M 12 12 Q 13 9 17 9 Q 18 13 17 15 Q 13 16 12 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
-                        <circle cx="14" cy="12" r="0.8" fill="#ffffff"/>
-                        <rect x="25" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad3)" stroke="#0f172a" stroke-width="1"/>
-                        <path d="M 15 20 L 25 20 L 23 29 L 17 29 Z" fill="url(#divBotHeadGrad3)" stroke="#0f172a" stroke-width="1.8"/>
-                        <circle cx="18" cy="24" r="1.5" fill="#3b82f6"/>
+                        <line x1="17" y1="7" x2="17" y2="2" stroke="#0f172a" stroke-width="2"/>
+                        <circle cx="17" cy="2" r="2" fill="#06b6d4"/>
+                        <circle cx="17" cy="13" r="8" fill="url(#divBotHeadGrad3)" stroke="#0f172a" stroke-width="1.8"/>
+                        <path d="M 14 7 Q 18 6 21 9" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                        <path d="M 9 12 Q 10 9 14 9 Q 15 13 14 15 Q 10 16 9 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
+                        <circle cx="11" cy="12" r="0.8" fill="#ffffff"/>
+                        <rect x="22" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad3)" stroke="#0f172a" stroke-width="1"/>
+                        <path d="M 12 20 L 22 20 L 20 29 L 14 29 Z" fill="url(#divBotHeadGrad3)" stroke="#0f172a" stroke-width="1.8"/>
+                        <circle cx="15" cy="24" r="1.5" fill="#3b82f6"/>
                     </g>
+
                     <g class="divider-robot-leg divider-robot-leg-front">
-                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 16 28 L 12 38 L 8 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 16 28 L 12 38 L 8 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
                     <g class="divider-robot-arm divider-robot-arm-front">
-                        <path d="M 18 19 L 12 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M 18 19 L 12 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
+                        <path d="M 16 19 L 10 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M 16 19 L 10 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
                 </svg>
             </div>

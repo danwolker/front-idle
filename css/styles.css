@@ -126,9 +126,9 @@ h1, h2, h3, .logo-text, .price {
 }
 
 .divider-dragon-svg {
-    width: 48px;
-    height: 40px;
-    filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.7));
+    width: 60px;
+    height: 44px;
+    filter: drop-shadow(0 0 12px rgba(239, 68, 68, 0.75));
     overflow: visible;
 }
 
