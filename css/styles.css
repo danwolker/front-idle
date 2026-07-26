@@ -124,11 +124,17 @@ h1, h2, h3, .logo-text, .price {
     box-shadow: none !important;
     z-index: 5;
     transform: translateY(-24px); /* Eleva o dragão para as patas assentarem EXATAMENTE sobre a linha do robô */
+    width: 90px;
+    height: 68px;
+    flex-shrink: 0;
 }
 
 .divider-dragon-svg {
-    width: 90px;
-    height: 68px;
+    width: 90px !important;
+    height: 68px !important;
+    max-width: 90px !important;
+    max-height: 68px !important;
+    flex-shrink: 0;
     filter: drop-shadow(0 0 16px rgba(239, 68, 68, 0.8));
     overflow: visible;
 }
