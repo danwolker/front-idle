@@ -93,14 +93,49 @@
             </div>
         </section>
 
-        <!-- Divisor Humano de Seção com Robô Caminhando e Pulando -->
+        <!-- Divisor Humano de Seção com Dragãozinho Boss e Robô Skippando Boss -->
         <div class="section-divider container fade-in-up">
             <div class="divider-line"></div>
-            <div class="divider-badge"><span class="divider-dot"></span></div>
+            
+            <!-- Dragãozinho Boss no centro da linha -->
+            <div class="divider-badge divider-boss-dragon-wrapper">
+                <svg class="divider-dragon-svg" viewBox="0 0 36 36">
+                    <defs>
+                        <linearGradient id="dragonSkinGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#ef4444"/>
+                            <stop offset="60%" stop-color="#b91c1c"/>
+                            <stop offset="100%" stop-color="#7f1d1d"/>
+                        </linearGradient>
+                        <linearGradient id="dragonWingGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#f97316"/>
+                            <stop offset="100%" stop-color="#dc2626"/>
+                        </linearGradient>
+                    </defs>
+                    <g class="dragon-wing dragon-wing-back">
+                        <path d="M 14 14 C 10 6, 2 8, 4 16 C 8 16, 12 18, 14 18 Z" fill="url(#dragonWingGrad)" stroke="#450a0a" stroke-width="1.2"/>
+                    </g>
+                    <path d="M 22 22 Q 28 24 30 20 Q 32 23 29 25 Q 24 26 20 23 Z" fill="#991b1b" stroke="#450a0a" stroke-width="1"/>
+                    <ellipse cx="18" cy="20" rx="7" ry="6" fill="url(#dragonSkinGrad)" stroke="#450a0a" stroke-width="1.5"/>
+                    <path d="M 13 18 Q 17 25 21 21 Q 17 17 13 18 Z" fill="#fde047" opacity="0.85"/>
+                    <g class="dragon-head">
+                        <path d="M 12 16 Q 8 10 5 13 Q 3 17 7 19 Q 10 20 14 18 Z" fill="url(#dragonSkinGrad)" stroke="#450a0a" stroke-width="1.5"/>
+                        <path d="M 12 12 Q 13 6 16 8 Z" fill="#f59e0b" stroke="#450a0a" stroke-width="1"/>
+                        <circle cx="8" cy="14" r="1.8" fill="#facc15"/>
+                        <circle cx="7.5" cy="14" r="0.8" fill="#dc2626"/>
+                    </g>
+                    <g class="dragon-wing dragon-wing-front">
+                        <path d="M 17 15 C 13 5, 4 8, 7 17 C 11 17, 15 19, 17 17 Z" fill="url(#dragonWingGrad)" stroke="#450a0a" stroke-width="1.2"/>
+                    </g>
+                    <path d="M 14 25 L 12 29 L 16 29 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
+                    <path d="M 20 25 L 19 29 L 23 29 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
+                </svg>
+                <div class="boss-tag">BOSS SKIP</div>
+            </div>
+
             <div class="divider-line"></div>
             
             <div class="divider-walking-robot">
-                <svg class="divider-robot-svg" viewBox="0 0 40 44">
+                <svg class="divider-robot-svg" viewBox="0 0 40 46">
                     <defs>
                         <linearGradient id="divBotHeadGrad" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="0%" stop-color="#ffffff"/>
@@ -110,34 +145,40 @@
                             <stop offset="0%" stop-color="#3b82f6"/>
                             <stop offset="100%" stop-color="#0284c7"/>
                         </linearGradient>
+                        <linearGradient id="jetFlameGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#06b6d4"/>
+                            <stop offset="50%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="transparent"/>
+                        </linearGradient>
                     </defs>
-                    <!-- Perna Traseira -->
+                    <g class="robot-jetpack-flame">
+                        <path d="M 18 30 Q 16 38 17 44 Q 20 40 21 44 Q 22 38 20 30 Z" fill="url(#jetFlameGrad)"/>
+                        <circle cx="19" cy="33" r="2.5" fill="#ffffff"/>
+                    </g>
                     <g class="divider-robot-leg divider-robot-leg-back">
                         <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <!-- Braço Traseiro -->
                     <g class="divider-robot-arm divider-robot-arm-back">
                         <path d="M 22 19 L 27 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 22 19 L 27 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <!-- Corpo / Tronco / Viseira Virado para a Esquerda -->
+                    <rect x="23" y="18" width="5" height="10" rx="2" fill="#3b82f6" stroke="#0f172a" stroke-width="1.2"/>
                     <g class="divider-robot-body">
                         <line x1="20" y1="7" x2="20" y2="2" stroke="#0f172a" stroke-width="2"/>
                         <circle cx="20" cy="2" r="2" fill="#06b6d4"/>
                         <circle cx="20" cy="13" r="8" fill="url(#divBotHeadGrad)" stroke="#0f172a" stroke-width="1.8"/>
+                        <path d="M 17 7 Q 21 6 24 9" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
                         <path d="M 12 12 Q 13 9 17 9 Q 18 13 17 15 Q 13 16 12 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
                         <circle cx="14" cy="12" r="0.8" fill="#ffffff"/>
                         <rect x="25" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad)" stroke="#0f172a" stroke-width="1"/>
                         <path d="M 15 20 L 25 20 L 23 29 L 17 29 Z" fill="url(#divBotHeadGrad)" stroke="#0f172a" stroke-width="1.8"/>
                         <circle cx="18" cy="24" r="1.5" fill="#3b82f6"/>
                     </g>
-                    <!-- Perna Dianteira -->
                     <g class="divider-robot-leg divider-robot-leg-front">
                         <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <!-- Braço Dianteiro -->
                     <g class="divider-robot-arm divider-robot-arm-front">
                         <path d="M 18 19 L 12 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 18 19 L 12 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
@@ -175,14 +216,48 @@
             </div>
         </section>
 
-        <!-- Divisor Humano de Seção com Robô Caminhando e Pulando -->
+        <!-- Divisor Humano de Seção com Dragãozinho Boss e Robô Skippando Boss -->
         <div class="section-divider container fade-in-up">
             <div class="divider-line"></div>
-            <div class="divider-badge"><span class="divider-dot"></span></div>
+            
+            <div class="divider-badge divider-boss-dragon-wrapper">
+                <svg class="divider-dragon-svg" viewBox="0 0 36 36">
+                    <defs>
+                        <linearGradient id="dragonSkinGrad2" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#ef4444"/>
+                            <stop offset="60%" stop-color="#b91c1c"/>
+                            <stop offset="100%" stop-color="#7f1d1d"/>
+                        </linearGradient>
+                        <linearGradient id="dragonWingGrad2" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#f97316"/>
+                            <stop offset="100%" stop-color="#dc2626"/>
+                        </linearGradient>
+                    </defs>
+                    <g class="dragon-wing dragon-wing-back">
+                        <path d="M 14 14 C 10 6, 2 8, 4 16 C 8 16, 12 18, 14 18 Z" fill="url(#dragonWingGrad2)" stroke="#450a0a" stroke-width="1.2"/>
+                    </g>
+                    <path d="M 22 22 Q 28 24 30 20 Q 32 23 29 25 Q 24 26 20 23 Z" fill="#991b1b" stroke="#450a0a" stroke-width="1"/>
+                    <ellipse cx="18" cy="20" rx="7" ry="6" fill="url(#dragonSkinGrad2)" stroke="#450a0a" stroke-width="1.5"/>
+                    <path d="M 13 18 Q 17 25 21 21 Q 17 17 13 18 Z" fill="#fde047" opacity="0.85"/>
+                    <g class="dragon-head">
+                        <path d="M 12 16 Q 8 10 5 13 Q 3 17 7 19 Q 10 20 14 18 Z" fill="url(#dragonSkinGrad2)" stroke="#450a0a" stroke-width="1.5"/>
+                        <path d="M 12 12 Q 13 6 16 8 Z" fill="#f59e0b" stroke="#450a0a" stroke-width="1"/>
+                        <circle cx="8" cy="14" r="1.8" fill="#facc15"/>
+                        <circle cx="7.5" cy="14" r="0.8" fill="#dc2626"/>
+                    </g>
+                    <g class="dragon-wing dragon-wing-front">
+                        <path d="M 17 15 C 13 5, 4 8, 7 17 C 11 17, 15 19, 17 17 Z" fill="url(#dragonWingGrad2)" stroke="#450a0a" stroke-width="1.2"/>
+                    </g>
+                    <path d="M 14 25 L 12 29 L 16 29 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
+                    <path d="M 20 25 L 19 29 L 23 29 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
+                </svg>
+                <div class="boss-tag">BOSS SKIP</div>
+            </div>
+
             <div class="divider-line"></div>
             
             <div class="divider-walking-robot">
-                <svg class="divider-robot-svg" viewBox="0 0 40 44">
+                <svg class="divider-robot-svg" viewBox="0 0 40 46">
                     <defs>
                         <linearGradient id="divBotHeadGrad2" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="0%" stop-color="#ffffff"/>
@@ -192,34 +267,40 @@
                             <stop offset="0%" stop-color="#3b82f6"/>
                             <stop offset="100%" stop-color="#0284c7"/>
                         </linearGradient>
+                        <linearGradient id="jetFlameGrad2" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#06b6d4"/>
+                            <stop offset="50%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="transparent"/>
+                        </linearGradient>
                     </defs>
-                    <!-- Perna Traseira -->
+                    <g class="robot-jetpack-flame">
+                        <path d="M 18 30 Q 16 38 17 44 Q 20 40 21 44 Q 22 38 20 30 Z" fill="url(#jetFlameGrad2)"/>
+                        <circle cx="19" cy="33" r="2.5" fill="#ffffff"/>
+                    </g>
                     <g class="divider-robot-leg divider-robot-leg-back">
                         <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <!-- Braço Traseiro -->
                     <g class="divider-robot-arm divider-robot-arm-back">
                         <path d="M 22 19 L 27 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 22 19 L 27 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <!-- Corpo / Tronco / Viseira Virado para a Esquerda -->
+                    <rect x="23" y="18" width="5" height="10" rx="2" fill="#3b82f6" stroke="#0f172a" stroke-width="1.2"/>
                     <g class="divider-robot-body">
                         <line x1="20" y1="7" x2="20" y2="2" stroke="#0f172a" stroke-width="2"/>
                         <circle cx="20" cy="2" r="2" fill="#06b6d4"/>
                         <circle cx="20" cy="13" r="8" fill="url(#divBotHeadGrad2)" stroke="#0f172a" stroke-width="1.8"/>
+                        <path d="M 17 7 Q 21 6 24 9" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
                         <path d="M 12 12 Q 13 9 17 9 Q 18 13 17 15 Q 13 16 12 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
                         <circle cx="14" cy="12" r="0.8" fill="#ffffff"/>
                         <rect x="25" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad2)" stroke="#0f172a" stroke-width="1"/>
                         <path d="M 15 20 L 25 20 L 23 29 L 17 29 Z" fill="url(#divBotHeadGrad2)" stroke="#0f172a" stroke-width="1.8"/>
                         <circle cx="18" cy="24" r="1.5" fill="#3b82f6"/>
                     </g>
-                    <!-- Perna Dianteira -->
                     <g class="divider-robot-leg divider-robot-leg-front">
                         <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <!-- Braço Dianteiro -->
                     <g class="divider-robot-arm divider-robot-arm-front">
                         <path d="M 18 19 L 12 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 18 19 L 12 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
@@ -477,14 +558,48 @@
             </div>
         </section>
 
-        <!-- Divisor Humano de Seção com Robô Caminhando e Pulando -->
+        <!-- Divisor Humano de Seção com Dragãozinho Boss e Robô Skippando Boss -->
         <div class="section-divider container fade-in-up">
             <div class="divider-line"></div>
-            <div class="divider-badge"><span class="divider-dot"></span></div>
+            
+            <div class="divider-badge divider-boss-dragon-wrapper">
+                <svg class="divider-dragon-svg" viewBox="0 0 36 36">
+                    <defs>
+                        <linearGradient id="dragonSkinGrad3" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#ef4444"/>
+                            <stop offset="60%" stop-color="#b91c1c"/>
+                            <stop offset="100%" stop-color="#7f1d1d"/>
+                        </linearGradient>
+                        <linearGradient id="dragonWingGrad3" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#f97316"/>
+                            <stop offset="100%" stop-color="#dc2626"/>
+                        </linearGradient>
+                    </defs>
+                    <g class="dragon-wing dragon-wing-back">
+                        <path d="M 14 14 C 10 6, 2 8, 4 16 C 8 16, 12 18, 14 18 Z" fill="url(#dragonWingGrad3)" stroke="#450a0a" stroke-width="1.2"/>
+                    </g>
+                    <path d="M 22 22 Q 28 24 30 20 Q 32 23 29 25 Q 24 26 20 23 Z" fill="#991b1b" stroke="#450a0a" stroke-width="1"/>
+                    <ellipse cx="18" cy="20" rx="7" ry="6" fill="url(#dragonSkinGrad3)" stroke="#450a0a" stroke-width="1.5"/>
+                    <path d="M 13 18 Q 17 25 21 21 Q 17 17 13 18 Z" fill="#fde047" opacity="0.85"/>
+                    <g class="dragon-head">
+                        <path d="M 12 16 Q 8 10 5 13 Q 3 17 7 19 Q 10 20 14 18 Z" fill="url(#dragonSkinGrad3)" stroke="#450a0a" stroke-width="1.5"/>
+                        <path d="M 12 12 Q 13 6 16 8 Z" fill="#f59e0b" stroke="#450a0a" stroke-width="1"/>
+                        <circle cx="8" cy="14" r="1.8" fill="#facc15"/>
+                        <circle cx="7.5" cy="14" r="0.8" fill="#dc2626"/>
+                    </g>
+                    <g class="dragon-wing dragon-wing-front">
+                        <path d="M 17 15 C 13 5, 4 8, 7 17 C 11 17, 15 19, 17 17 Z" fill="url(#dragonWingGrad3)" stroke="#450a0a" stroke-width="1.2"/>
+                    </g>
+                    <path d="M 14 25 L 12 29 L 16 29 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
+                    <path d="M 20 25 L 19 29 L 23 29 Z" fill="#7f1d1d" stroke="#450a0a" stroke-width="1"/>
+                </svg>
+                <div class="boss-tag">BOSS SKIP</div>
+            </div>
+
             <div class="divider-line"></div>
             
             <div class="divider-walking-robot">
-                <svg class="divider-robot-svg" viewBox="0 0 40 44">
+                <svg class="divider-robot-svg" viewBox="0 0 40 46">
                     <defs>
                         <linearGradient id="divBotHeadGrad3" x1="0" y1="0" x2="0" y2="1">
                             <stop offset="0%" stop-color="#ffffff"/>
@@ -494,34 +609,40 @@
                             <stop offset="0%" stop-color="#3b82f6"/>
                             <stop offset="100%" stop-color="#0284c7"/>
                         </linearGradient>
+                        <linearGradient id="jetFlameGrad3" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#06b6d4"/>
+                            <stop offset="50%" stop-color="#3b82f6"/>
+                            <stop offset="100%" stop-color="transparent"/>
+                        </linearGradient>
                     </defs>
-                    <!-- Perna Traseira -->
+                    <g class="robot-jetpack-flame">
+                        <path d="M 18 30 Q 16 38 17 44 Q 20 40 21 44 Q 22 38 20 30 Z" fill="url(#jetFlameGrad3)"/>
+                        <circle cx="19" cy="33" r="2.5" fill="#ffffff"/>
+                    </g>
                     <g class="divider-robot-leg divider-robot-leg-back">
                         <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 22 28 L 26 38 L 29 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <!-- Braço Traseiro -->
                     <g class="divider-robot-arm divider-robot-arm-back">
                         <path d="M 22 19 L 27 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 22 19 L 27 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <!-- Corpo / Tronco / Viseira Virado para a Esquerda -->
+                    <rect x="23" y="18" width="5" height="10" rx="2" fill="#3b82f6" stroke="#0f172a" stroke-width="1.2"/>
                     <g class="divider-robot-body">
                         <line x1="20" y1="7" x2="20" y2="2" stroke="#0f172a" stroke-width="2"/>
                         <circle cx="20" cy="2" r="2" fill="#06b6d4"/>
                         <circle cx="20" cy="13" r="8" fill="url(#divBotHeadGrad3)" stroke="#0f172a" stroke-width="1.8"/>
+                        <path d="M 17 7 Q 21 6 24 9" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round"/>
                         <path d="M 12 12 Q 13 9 17 9 Q 18 13 17 15 Q 13 16 12 12 Z" fill="#06b6d4" stroke="#0f172a" stroke-width="1"/>
                         <circle cx="14" cy="12" r="0.8" fill="#ffffff"/>
                         <rect x="25" y="10" width="3.5" height="6" rx="1.7" fill="url(#divBotEarGrad3)" stroke="#0f172a" stroke-width="1"/>
                         <path d="M 15 20 L 25 20 L 23 29 L 17 29 Z" fill="url(#divBotHeadGrad3)" stroke="#0f172a" stroke-width="1.8"/>
                         <circle cx="18" cy="24" r="1.5" fill="#3b82f6"/>
                     </g>
-                    <!-- Perna Dianteira -->
                     <g class="divider-robot-leg divider-robot-leg-front">
                         <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 18 28 L 14 38 L 10 38" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
                     </g>
-                    <!-- Braço Dianteiro -->
                     <g class="divider-robot-arm divider-robot-arm-front">
                         <path d="M 18 19 L 12 26" fill="none" stroke="#0f172a" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M 18 19 L 12 26" fill="none" stroke="#3b82f6" stroke-width="2.2" stroke-linecap="round"/>
