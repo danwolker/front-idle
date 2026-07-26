@@ -183,6 +183,93 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial calculation
         updateRobotPosition();
     }
+
+    // Image Lightbox & Zoom Feature
+    const lightboxModal = document.getElementById('imageLightboxModal');
+    const lightboxImg = document.getElementById('lightboxImage');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxDesc = document.getElementById('lightboxDescription');
+    const closeBtn = document.getElementById('lightboxCloseBtn');
+    const backdrop = document.querySelector('.lightbox-backdrop');
+    const zoomInBtn = document.getElementById('zoomInBtn');
+    const zoomOutBtn = document.getElementById('zoomOutBtn');
+    const zoomResetBtn = document.getElementById('zoomResetBtn');
+
+    let currentZoom = 1;
+    const minZoom = 0.8;
+    const maxZoom = 3.2;
+    const zoomStep = 0.3;
+
+    function updateZoom(newZoom) {
+        currentZoom = Math.min(maxZoom, Math.max(minZoom, newZoom));
+        if (lightboxImg) {
+            lightboxImg.style.transform = `scale(${currentZoom})`;
+            lightboxImg.style.cursor = currentZoom > 1 ? 'zoom-out' : 'zoom-in';
+        }
+    }
+
+    function openLightbox(imgSrc, titleText, descText) {
+        if (!lightboxModal || !lightboxImg) return;
+        lightboxImg.src = imgSrc;
+        if (lightboxTitle) lightboxTitle.textContent = titleText;
+        if (lightboxDesc) lightboxDesc.textContent = descText;
+        currentZoom = 1;
+        updateZoom(1);
+
+        lightboxModal.classList.add('active');
+        lightboxModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+        if (!lightboxModal) return;
+        lightboxModal.classList.remove('active');
+        lightboxModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    // Attach click listener to module cards
+    document.querySelectorAll('.module-card').forEach(card => {
+        const imgContainer = card.querySelector('.module-img-container');
+        const img = card.querySelector('.module-img');
+        const title = card.querySelector('.module-content h3');
+        const desc = card.querySelector('.module-content p');
+
+        if (imgContainer && img) {
+            // Add zoom hint badge on image hover
+            const hint = document.createElement('div');
+            hint.className = 'img-zoom-hint';
+            hint.innerHTML = '<span>🔍 Clique para ampliar</span>';
+            imgContainer.appendChild(hint);
+
+            imgContainer.addEventListener('click', () => {
+                openLightbox(img.src, title ? title.textContent : '', desc ? desc.textContent : '');
+            });
+        }
+    });
+
+    // Zoom Controls
+    if (zoomInBtn) zoomInBtn.addEventListener('click', (e) => { e.stopPropagation(); updateZoom(currentZoom + zoomStep); });
+    if (zoomOutBtn) zoomOutBtn.addEventListener('click', (e) => { e.stopPropagation(); updateZoom(currentZoom - zoomStep); });
+    if (zoomResetBtn) zoomResetBtn.addEventListener('click', (e) => { e.stopPropagation(); updateZoom(1); });
+
+    // Toggle Zoom on clicking image inside modal
+    if (lightboxImg) {
+        lightboxImg.addEventListener('click', (e) => {
+            e.stopPropagation();
+            updateZoom(currentZoom > 1 ? 1 : 1.8);
+        });
+    }
+
+    // Close Modal Events
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (backdrop) backdrop.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
 });
 
 
