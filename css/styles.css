@@ -112,7 +112,7 @@ h1, h2, h3, .logo-text, .price {
     z-index: 5;
 }
 
-/* Dragãozinho Boss Limpo no centro da linha (sem caixa e sem texto) */
+/* Dragãozinho Boss Limpo no centro da linha (Patas sobre a linha) */
 .divider-dragon-badge {
     position: relative;
     display: flex;
@@ -123,6 +123,7 @@ h1, h2, h3, .logo-text, .price {
     border: none !important;
     box-shadow: none !important;
     z-index: 5;
+    transform: translateY(-10px); /* Eleva o dragão para as patas assentarem EXATAMENTE sobre a linha */
 }
 
 .divider-dragon-svg {
@@ -135,12 +136,12 @@ h1, h2, h3, .logo-text, .price {
 /* Animações das asas e cabeça do Dragão Boss */
 .dragon-wing-front, .dragon-wing-back {
     animation: dragon-wing-flap 0.45s ease-in-out infinite alternate;
-    transform-origin: 18px 18px;
+    transform-origin: 20px 22px;
 }
 
 @keyframes dragon-wing-flap {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(-24deg); }
+    100% { transform: rotate(-22deg); }
 }
 
 .dragon-head {
