@@ -25,7 +25,12 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
+    background-color: #08080c;
+    background-image: 
+        radial-gradient(rgba(139, 92, 246, 0.12) 1px, transparent 1px),
+        radial-gradient(rgba(59, 130, 246, 0.07) 1px, transparent 1px);
+    background-size: 36px 36px, 72px 72px;
+    background-position: 0 0, 18px 18px;
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
@@ -37,39 +42,39 @@ h1, h2, h3, .logo-text, .price {
     font-family: 'Outfit', sans-serif;
 }
 
-/* Background Shapes */
+/* Organic Ambient Light Mesh (Substitui as manchas genéricas de IA) */
 .bg-shape {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    z-index: -1;
-    opacity: 0.45;
+    position: fixed;
     pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
+    opacity: 0.35;
+    filter: blur(140px);
 }
 
 .bg-shape-1 {
-    width: 450px;
-    height: 450px;
-    background: var(--primary-color);
-    top: -100px;
-    left: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--primary-color) 0%, transparent 70%);
+    top: -150px;
+    left: -150px;
 }
 
 .bg-shape-2 {
-    width: 350px;
-    height: 350px;
-    background: var(--secondary-color);
-    top: 35%;
-    right: -80px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, var(--secondary-color) 0%, transparent 70%);
+    top: 40%;
+    right: -120px;
 }
 
 .bg-shape-3 {
-    width: 400px;
-    height: 400px;
-    background: var(--accent-color);
-    bottom: 10%;
-    left: 20%;
-    opacity: 0.25;
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+    bottom: 5%;
+    left: 15%;
+    opacity: 0.2;
 }
 
 /* Layout */
@@ -79,13 +84,57 @@ h1, h2, h3, .logo-text, .price {
     padding: 0 2rem;
 }
 
-/* Glassmorphism utility */
+/* Elementos de Divisão e Estilização Humana */
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem auto;
+    max-width: 1000px;
+    opacity: 0.6;
+}
+
+.divider-line {
+    flex-grow: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.4), transparent);
+}
+
+.divider-badge {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.divider-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    box-shadow: 0 0 12px var(--primary-color), 0 0 20px var(--secondary-color);
+}
+
+/* Human Crafted Glassmorphism */
 .glass-panel {
-    background: var(--surface-color);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid var(--surface-border);
-    border-radius: 16px;
+    position: relative;
+    background: linear-gradient(160deg, rgba(20, 24, 38, 0.75) 0%, rgba(11, 13, 22, 0.85) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.glass-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.6), transparent);
+    pointer-events: none;
 }
 
 /* Navbar */
