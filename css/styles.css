@@ -112,56 +112,94 @@ h1, h2, h3, .logo-text, .price {
     z-index: 5;
 }
 
-/* Dragãozinho Boss no centro da linha */
-.divider-boss-dragon-wrapper {
+/* Dragãozinho Boss Limpo no centro da linha (sem caixa e sem texto) */
+.divider-dragon-badge {
     position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(239, 68, 68, 0.4);
-    border-radius: 12px;
-    padding: 2px 6px;
-    box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+    padding: 0;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 5;
 }
 
 .divider-dragon-svg {
-    width: 34px;
-    height: 34px;
-    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.6));
+    width: 48px;
+    height: 40px;
+    filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.7));
     overflow: visible;
-}
-
-.boss-tag {
-    font-size: 0.6rem;
-    font-weight: 800;
-    color: #ef4444;
-    letter-spacing: 0.5px;
-    margin-top: -2px;
-    text-transform: uppercase;
-    text-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
 }
 
 /* Animações das asas e cabeça do Dragão Boss */
 .dragon-wing-front, .dragon-wing-back {
-    animation: dragon-wing-flap 0.5s ease-in-out infinite alternate;
-    transform-origin: 15px 16px;
+    animation: dragon-wing-flap 0.45s ease-in-out infinite alternate;
+    transform-origin: 18px 18px;
 }
 
 @keyframes dragon-wing-flap {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(-20deg); }
+    100% { transform: rotate(-24deg); }
 }
 
 .dragon-head {
-    animation: dragon-head-bob 1.2s ease-in-out infinite alternate;
-    transform-origin: 18px 20px;
+    animation: dragon-head-fire-prep 0.9s ease-in-out infinite alternate;
+    transform-origin: 20px 20px;
 }
 
-@keyframes dragon-head-bob {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-1.5px); }
+@keyframes dragon-head-fire-prep {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-2px) rotate(4deg); }
+}
+
+/* Jato de Fogo Cuspindo (Fire Breath Blast) */
+.dragon-fire-breath {
+    animation: dragon-spit-fire 1.8s ease-in-out infinite;
+    transform-origin: 30px 19px;
+}
+
+@keyframes dragon-spit-fire {
+    0% {
+        opacity: 0;
+        transform: scale(0.2) translateX(-4px);
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+    }
+    45% {
+        opacity: 1;
+        transform: scale(1.3) translateX(3px);
+        filter: drop-shadow(0 0 10px #f97316);
+    }
+    70% {
+        opacity: 0.85;
+        transform: scale(0.9) translateX(5px);
+    }
+    85%, 100% {
+        opacity: 0;
+        transform: scale(0.2) translateX(8px);
+    }
+}
+
+.fire-spark-1 { animation: spark-float-1 0.9s linear infinite; }
+.fire-spark-2 { animation: spark-float-2 0.9s linear infinite 0.3s; }
+.fire-spark-3 { animation: spark-float-3 0.9s linear infinite 0.6s; }
+
+@keyframes spark-float-1 {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(8px, -4px) scale(0); opacity: 0; }
+}
+
+@keyframes spark-float-2 {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(10px, 3px) scale(0); opacity: 0; }
+}
+
+@keyframes spark-float-3 {
+    0% { transform: translate(0, 0) scale(1); opacity: 1; }
+    100% { transform: translate(6px, -2px) scale(0); opacity: 0; }
 }
 
 /* Robô Caminhando e Skippando o Boss Dragão */
