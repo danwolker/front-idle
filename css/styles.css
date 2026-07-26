@@ -112,7 +112,7 @@ h1, h2, h3, .logo-text, .price {
     z-index: 5;
 }
 
-/* Dragãozinho Boss Limpo no centro da linha (Patas sobre a linha) */
+/* Dragãozinho Boss Limpo no centro da linha (Patas alinhadas perfeitamente SOBRE a linha) */
 .divider-dragon-badge {
     position: relative;
     display: flex;
@@ -123,7 +123,7 @@ h1, h2, h3, .logo-text, .price {
     border: none !important;
     box-shadow: none !important;
     z-index: 5;
-    transform: translateY(-10px); /* Eleva o dragão para as patas assentarem EXATAMENTE sobre a linha */
+    transform: translateY(-24px); /* Eleva o dragão para as patas assentarem EXATAMENTE sobre a linha do robô */
 }
 
 .divider-dragon-svg {
