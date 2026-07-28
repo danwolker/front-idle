@@ -570,11 +570,11 @@ h1, h2, h3, .logo-text, .price {
 
 /* Hero Section */
 .hero {
-    min-height: 90vh;
+    min-height: 82vh;
     display: flex;
     align-items: center;
     padding-top: 120px;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 }
 
 .hero-content {
@@ -1794,41 +1794,3 @@ footer {
     margin: 0;
 }
 
-/* Scroll Ladder Widget */
-.scroll-ladder-widget {
-    position: fixed;
-    right: 20px;
-    top: 0;
-    width: 40px;
-    height: 100vh;
-    z-index: 99;
-    pointer-events: none;
-}
-
-.scroll-ladder-svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.scroll-climbing-robot {
-    position: absolute;
-    width: 48px;
-    height: 52px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 100;
-}
-
-.scroll-robot-svg {
-    width: 100%;
-    height: 100%;
-}
-
-@media (max-width: 992px) {
-    .scroll-ladder-widget {
-        display: none;
-    }
-}
